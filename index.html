@@ -18,7 +18,190 @@
   <script defer data-domain="shaunhub.github.io" src="https://plausible.io/js/script.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    /* [Your full current CSS remains unchanged here] */
+    body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.container {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
+
+.profile h1 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.link-group {
+  margin-bottom: 1.5rem;
+}
+
+.link-group h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fff;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme="psychedelic"] .link {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #fff3;
+}
+
+.link i {
+  width: 20px;
+  text-align: center;
+}
+
+.link:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.sublinks {
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.sublinks .link {
+  font-size: 0.95rem;
+  background: #f9fafb;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+}
+
+.sublinks .link:hover {
+  background: #e0edff;
+}
+
+.theme-toggle {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.theme-toggle select {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: none;
+  color: var(--text);
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+:root {
+  --bg: #f9fafb;
+  --card-bg: #ffffffcc;
+  --border: #e2e8f0;
+  --accent: #3b82f6;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --radius: 14px;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --border: #334155;
+  --accent: #3b82f6;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+}
+
+[data-theme="apple"] {
+  --bg: #f5f5f7;
+  --card-bg: #ffffffee;
+  --border: #d1d1d6;
+  --accent: #007aff;
+  --text: #1c1c1e;
+  --muted: #8e8e93;
+}
+
+[data-theme="psychedelic"] {
+  --card-bg: rgba(255, 255, 255, 0.15);
+  --border: #ffffff33;
+  --accent: #ffffff;
+  --text: #ffffff;
+  --muted: #dddddd;
+}
+
+html[data-theme="psychedelic"] body {
+  background: linear-gradient(-45deg, #ff00cc, #3333ff, #00ffee, #ffcc00);
+  background-size: 400% 400%;
+  animation: psychedelicBG 20s ease infinite;
+}
+
+@keyframes psychedelicBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
   </style>
 </head>
 <body>
