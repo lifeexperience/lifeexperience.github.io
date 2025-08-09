@@ -1,159 +1,263 @@
-import React from "react";
-import { Mail, Heart, Coffee, Landmark, BookOpen, PenSquare, Globe, Link as LinkIcon, Twitter, Instagram, Youtube, Discord, ArrowRight, ShieldCheck } from "lucide-react";
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shaun Apple — Creator • Developer • Writer & Publisher</title>
+  <meta name="description" content="Official link hub for Shaun Apple — Creator, Developer, Writer & Publisher." />
+  <meta property="og:title" content="Shaun Apple — Creator • Developer • Writer & Publisher" />
+  <meta property="og:description" content="Support, books, writing, socials, and websites in one place." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lifeexperience.github.io/" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌊</text></svg>">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #0e1729;
+      --muted: #a0a8b8;
+      --text: #eef2ff;
+      --brand: #0ea5e9; /* sky-500 */
+      --brand-2: #22c55e; /* green-500 */
+      --ring: rgba(14,165,233,.45);
+      --shadow: 0 10px 30px rgba(2,6,23,.35);
+      --radius: 22px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --muted: #64748b;
+        --text: #0f172a;
+        --ring: rgba(14,165,233,.5);
+        --shadow: 0 10px 30px rgba(2,6,23,.08);
+      }
+    }
+    * { box-sizing: border-box }
+    html, body { height: 100% }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(14,165,233,.25), transparent 60%),
+                  radial-gradient(900px 700px at 110% 10%, rgba(34,197,94,.20), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      display: grid;
+      place-items: start center;
+      padding: 48px 16px 80px;
+    }
+    .wrap { width: 100%; max-width: 860px }
+    header {
+      display: grid; place-items: center; gap: 18px; text-align: center; margin-bottom: 26px;
+    }
+    .avatar {
+      width: 108px; height: 108px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      display: grid; place-items: center; color: #fff; font-weight: 800; letter-spacing: .5px;
+      box-shadow: var(--shadow);
+      position: relative; isolation: isolate;
+    }
+    .avatar::after { /* subtle ring */
+      content: ""; position: absolute; inset: -4px; border-radius: 50%;
+      background: conic-gradient(from 30deg, rgba(255,255,255,.12), rgba(255,255,255,0));
+      z-index: -1; filter: blur(3px);
+    }
+    h1 { margin: 0; font-size: clamp(24px, 3.2vw, 36px); letter-spacing: .3px }
+    .tagline { color: var(--muted); font-size: 15px }
 
-export default function LinkHub() {
-  const links = {
-    support: [
-      { href: "https://ko-fi.com/shaunapple", label: "Ko‑fi — Tip / Support", icon: Coffee },
-      { href: "https://www.patreon.com/c/ShaunApple", label: "Patreon — Join", icon: Heart },
-      { href: "https://buymeacoffee.com/shaunapple", label: "Buy Me a Coffee", icon: Coffee },
-      { href: "https://paypal.me/courage", label: "PayPal — Tip Jar", icon: Landmark },
-    ],
-    books: [
-      { href: "https://lifeexperience.github.io/", label: "See All Books & Buy", icon: BookOpen },
-    ],
-    writing: [
-      { href: "https://substack.com/@shaunapple", label: "Substack", icon: PenSquare },
-      { href: "https://medium.com/@shaunapple", label: "Medium", icon: PenSquare },
-    ],
-    social: [
-      { href: "https://x.com/ShaunApple", label: "X (Twitter)", icon: Twitter },
-      { href: "https://www.instagram.com/withinmylove/", label: "Instagram", icon: Instagram },
-      { href: "https://www.youtube.com/@ShaunApple", label: "YouTube", icon: Youtube },
-      { href: "https://discord.gg/G5zb2ySFc5", label: "Discord", icon: Discord },
-    ],
-    sites: [
-      { href: "http://www.shaunapple.com", label: "shaunapple.com", icon: Globe },
-      { href: "http://www.loveacrossborders.com", label: "loveacrossborders.com", icon: Globe },
-      { href: "https://lifeexperience.github.io/", label: "lifeexperience.github.io", icon: Globe },
-    ],
-    contact: [
-      { href: "mailto:shaunapple@gmail.com", label: "shaunapple@gmail.com", icon: Mail },
-    ],
-  };
+    /* Sections */
+    .section {
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      border: 1px solid color-mix(in srgb, var(--brand) 20%, var(--card));
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin: 14px 0 18px;
+    }
+    .section h2 {
+      font-size: 14px; text-transform: uppercase; letter-spacing: .16em; margin: 0 0 12px; color: var(--muted);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .grid {
+      display: grid; gap: 10px; grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+    @media (min-width: 640px){ .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (min-width: 920px){ .grid { grid-template-columns: repeat(3, minmax(0,1fr)); } }
 
-  const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-    <section className="mt-8">
-      <h2 className="text-lg md:text-xl font-semibold text-zinc-100/90 tracking-wide mb-3">{title}</h2>
-      <div className="grid gap-3">
-        {children}
+    /* Link Cards */
+    .link {
+      display: flex; align-items: center; gap: 14px; padding: 14px 14px; text-decoration: none;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--card) 96%, transparent), color-mix(in srgb, var(--card) 86%, transparent));
+      border: 1px solid color-mix(in srgb, var(--brand) 14%, var(--card));
+      border-radius: 16px; color: var(--text); position: relative; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .link:hover { transform: translateY(-3px); box-shadow: 0 14px 26px rgba(2,6,23,.25); border-color: var(--brand); }
+    .link:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
+    .icon { width: 22px; height: 22px; flex: none; opacity: .95 }
+    .label { font-weight: 650; letter-spacing: .2px }
+    .sub { color: var(--muted); font-size: 13px }
+    .grow { flex: 1 }
+    .pill { font-size: 12px; padding: 4px 8px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--brand) 28%, var(--card)); color: var(--brand) }
+
+    /* Book placeholders */
+    .book {
+      display: grid; gap: 6px; padding: 14px; border: 1px dashed color-mix(in srgb, var(--brand) 28%, var(--card)); border-radius: 14px;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--card) 96%, transparent), color-mix(in srgb, var(--card) 86%, transparent));
+    }
+    .book .title { font-weight: 700 }
+    .book .coming { font-size: 12px; color: var(--muted) }
+
+    footer { margin-top: 24px; text-align: center; color: var(--muted); font-size: 13px }
+    .copyright { margin-top: 6px; font-size: 12px; opacity: .9 }
+    .watermark { opacity: .5 }
+
+    /* Small helper */
+    .row { display:flex; gap:10px; align-items:center; flex-wrap: wrap }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">SA</div>
+      <h1>Shaun Apple</h1>
+      <div class="tagline">Creator • Developer • Writer & Publisher</div>
+      <div class="row" role="group" aria-label="Quick actions">
+        <a class="link" href="mailto:shaunapple@gmail.com" aria-label="Email Shaun">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 11 4 6.01V6h16ZM4 18V8l8 5 8-5v10H4Z"/></svg>
+          <div class="grow">
+            <div class="label">Email</div>
+            <div class="sub">shaunapple@gmail.com</div>
+          </div>
+          <span class="pill">Contact</span>
+        </a>
+        <a class="link" href="https://paypal.me/courage" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 21a1 1 0 0 1-1-1l1-6h3.5a6.5 6.5 0 1 0 0-13H7.5a1 1 0 0 0-1 .84L4.06 14H3a1 1 0 1 0 0 2h.69L3 20a1 1 0 0 0 1 1H7Zm3.5-17h.5a4.5 4.5 0 0 1 0 9H7.91l1.12-7h1.47Z"/></svg>
+          <div class="grow">
+            <div class="label">Support</div>
+            <div class="sub">PayPal — @courage</div>
+          </div>
+          <span class="pill">Donate</span>
+        </a>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="support">
+      <h2 id="support">Support My Work</h2>
+      <div class="grid">
+        <a class="link" href="https://ko-fi.com/shaunapple" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h12a2 2 0 0 1 2 2v2h1a3 3 0 0 1 0 6h-1v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm14 6h1a1 1 0 1 1 0 2h-1v-2Z"/></svg>
+          <div class="grow"><div class="label">Ko‑fi</div><div class="sub">Buy a coffee</div></div>
+        </a>
+        <a class="link" href="https://www.patreon.com/c/ShaunApple" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3h2v18H5V3Zm9 0a7 7 0 1 1 0 14 7 7 0 0 1 0-14Z"/></svg>
+          <div class="grow"><div class="label">Patreon</div><div class="sub">Become a member</div></div>
+        </a>
+        <a class="link" href="https://buymeacoffee.com/shaunapple" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h12l-1 10a5 5 0 0 1-5 5 5 5 0 0 1-5-5L6 5Zm1-2h10l1 2H6l1-2Z"/></svg>
+          <div class="grow"><div class="label">Buy Me a Coffee</div><div class="sub">Tip jar</div></div>
+        </a>
+        <a class="link" href="https://paypal.me/courage" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 1 1 0 16H9l-1 4H5l1-4H3l3-12h6Z"/></svg>
+          <div class="grow"><div class="label">PayPal</div><div class="sub">One‑time support</div></div>
+        </a>
       </div>
     </section>
-  );
 
-  const ButtonLink = ({ href, label, Icon }: { href: string; label: string; Icon: any }) => (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition p-4 backdrop-blur-sm shadow-sm"
-    >
-      <div className="flex items-center gap-3">
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
-          <Icon className="h-5 w-5" />
-        </span>
-        <span className="text-base md:text-lg font-medium">{label}</span>
-      </div>
-      <ArrowRight className="h-5 w-5 opacity-70 group-hover:translate-x-0.5 transition" />
-    </a>
-  );
-
-  return (
-    <main className="min-h-screen bg-[radial-gradient(1200px_600px_at_50%_-20%,rgba(255,255,255,0.2),transparent),linear-gradient(180deg,#0b0f17_0%,#0b0f17_60%,#0a0a0a_100%)] text-white">
-      {/* SEO / Social meta (used when exported) */}
-      <head>
-        <title>Shaun Apple — Links & Support</title>
-        <meta name="description" content="Memoir • Poetry • Justice — Support, books, writing, and socials for Shaun Apple." />
-        <meta property="og:title" content="Shaun Apple — Links & Support" />
-        <meta property="og:description" content="Memoir • Poetry • Justice — Support, books, writing, and socials for Shaun Apple." />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </head>
-
-      <div className="mx-auto max-w-xl px-5 pb-24 pt-14">
-        {/* Header */}
-        <header className="flex flex-col items-center text-center">
-          <div className="relative mb-5">
-            {/* Avatar placeholder (swap with your photo later) */}
-            <div className="h-24 w-24 rounded-3xl bg-white/10 ring-1 ring-white/20 shadow-md" />
-            <span className="absolute -right-2 -bottom-2 inline-flex items-center gap-1 rounded-xl bg-white/10 px-2 py-1 text-xs">
-              <ShieldCheck className="h-3.5 w-3.5" /> Verified by Love Across Borders
-            </span>
-          </div>
-          <h1 className="text-2xl md:text-3xl font-bold tracking-tight">Shaun Apple <span className="align-middle">🍎</span></h1>
-          <p className="mt-2 text-zinc-200/80">
-            ✍️ Writer • 📚 Publisher • 🕊️ Truth‑Teller
-          </p>
-          <p className="mt-1 text-zinc-200/70">
-            💖 Memoir · 🎨 Poetry · ⚖️ Justice — Wrote myself back to life, across borders
-          </p>
-        </header>
-
-        {/* Primary CTA */}
-        <div className="mt-6">
-          <a
-            href="https://ko-fi.com/shaunapple"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block rounded-2xl border border-rose-300/40 bg-rose-400/20 p-4 text-center shadow hover:bg-rose-400/30 transition"
-          >
-            <div className="flex items-center justify-center gap-2">
-              <Coffee className="h-5 w-5" />
-              <span className="font-semibold">Support on Ko‑fi</span>
-              <ArrowRight className="h-5 w-5 opacity-80 group-hover:translate-x-0.5 transition" />
-            </div>
-            <p className="mt-1 text-sm text-white/80">One‑time or monthly — fastest, lowest fees</p>
-          </a>
+    <section class="section" aria-labelledby="books">
+      <h2 id="books">Books for Sale — Placeholders</h2>
+      <div class="grid">
+        <div class="book">
+          <div class="title">A Life Experience — The Shaun Apple Story (Part One)</div>
+          <a class="link" href="#" aria-disabled="true"><div class="label">Coming Soon</div><div class="sub">Amazon / Gumroad / Payhip</div></a>
         </div>
-
-        {/* Sections */}
-        <Section title="Support & Membership">
-          {links.support.map(({ href, label, icon: Icon }, i) => (
-            <ButtonLink key={i} href={href} label={label} Icon={Icon} />
-          ))}
-        </Section>
-
-        <Section title="Books">
-          {links.books.map(({ href, label, icon: Icon }, i) => (
-            <ButtonLink key={i} href={href} label={label} Icon={Icon} />
-          ))}
-        </Section>
-
-        <Section title="Read My Writing">
-          {links.writing.map(({ href, label, icon: Icon }, i) => (
-            <ButtonLink key={i} href={href} label={label} Icon={Icon} />
-          ))}
-        </Section>
-
-        <Section title="Socials">
-          {links.social.map(({ href, label, icon: Icon }, i) => (
-            <ButtonLink key={i} href={href} label={label} Icon={Icon} />
-          ))}
-        </Section>
-
-        <Section title="Websites">
-          {links.sites.map(({ href, label, icon: Icon }, i) => (
-            <ButtonLink key={i} href={href} label={label} Icon={Icon} />
-          ))}
-        </Section>
-
-        <Section title="Contact">
-          {links.contact.map(({ href, label, icon: Icon }, i) => (
-            <ButtonLink key={i} href={href} label={label} Icon={Icon} />
-          ))}
-        </Section>
-
-        {/* Footer */}
-        <footer className="mt-10 text-center text-xs text-white/60">
-          <p>© {new Date().getFullYear()} Shaun J Apple — All Rights Reserved.</p>
-          <p className="mt-1 inline-flex items-center gap-1">
-            <LinkIcon className="h-3.5 w-3.5" />
-            Share this page anywhere.
-          </p>
-        </footer>
+        <div class="book">
+          <div class="title">A Life Experience — The Shaun Apple Story (Part Two)</div>
+          <a class="link" href="#" aria-disabled="true"><div class="label">Coming Soon</div><div class="sub">Amazon / Gumroad / Payhip</div></a>
+        </div>
+        <div class="book">
+          <div class="title">SWAY (Concise & Verbose)</div>
+          <a class="link" href="#"><div class="label">Coming Soon</div><div class="sub">eBook & Paperback</div></a>
+        </div>
+        <div class="book">
+          <div class="title">Smithereens (2027)</div>
+          <a class="link" href="#"><div class="label">Coming Soon</div><div class="sub">eBook & Paperback</div></a>
+        </div>
+        <div class="book">
+          <div class="title">States (2027)</div>
+          <a class="link" href="#"><div class="label">Coming Soon</div><div class="sub">eBook & Paperback</div></a>
+        </div>
       </div>
-    </main>
-  );
-}
+    </section>
+
+    <section class="section" aria-labelledby="writing">
+      <h2 id="writing">Writing Platforms</h2>
+      <div class="grid">
+        <a class="link" href="https://substack.com/@shaunapple" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4h18v3H3V4Zm0 5h18v3H3V9Zm0 5h11v6l-4-2-4 2v-6Z"/></svg>
+          <div class="grow"><div class="label">Substack</div><div class="sub">shaunapple</div></div>
+        </a>
+        <a class="link" href="https://medium.com/@shaunapple" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Zm6 5a5 5 0 1 0 10 0 5 5 0 0 0-10 0ZM5 8h2v8H5V8Z"/></svg>
+          <div class="grow"><div class="label">Medium</div><div class="sub">@shaunapple</div></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="socials">
+      <h2 id="socials">Social Media</h2>
+      <div class="grid">
+        <a class="link" href="https://x.com/ShaunApple" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4V4Zm12.66 3H14l-2.02 2.63L9.99 7h-2.5l3.55 4.54L7 17h2.66l2.23-2.92L14.22 17h2.53l-3.7-4.78L16.66 7Z"/></svg>
+          <div class="grow"><div class="label">X (Twitter)</div><div class="sub">@ShaunApple</div></div>
+        </a>
+        <a class="link" href="https://www.youtube.com/@ShaunApple" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7Zm7 2.5v7l6-3.5-6-3.5Z"/></svg>
+          <div class="grow"><div class="label">YouTube</div><div class="sub">@ShaunApple</div></div>
+        </a>
+        <a class="link" href="https://www.instagram.com/withinmylove/" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg>
+          <div class="grow"><div class="label">Instagram</div><div class="sub">@withinmylove</div></div>
+        </a>
+        <a class="link" href="https://www.linkedin.com/in/shaunapple" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h5v5H4V4Zm0 7h5v9H4v-9Zm7 0h4v2.5c.6-1.1 1.8-2.5 4-2.5 3 0 5 2 5 6V20h-5v-4c0-2-1-3-2.5-3s-2.5 1-2.5 3v4H11v-9Z"/></svg>
+          <div class="grow"><div class="label">LinkedIn</div><div class="sub">shaunapple</div></div>
+        </a>
+        <a class="link" href="https://discord.gg/G5zb2ySFc5" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3h14a2 2 0 0 1 2 2v14l-3-2-2 2H7l-2-2-3 2V5a2 2 0 0 1 2-2Zm9 6c.83 0 1.5.9 1.5 2s-.67 2-1.5 2-1.5-.9-1.5-2 .67-2 1.5-2Zm-4 0c.83 0 1.5.9 1.5 2s-.67 2-1.5 2-1.5-.9-1.5-2 .67-2 1.5-2Z"/></svg>
+          <div class="grow"><div class="label">Discord</div><div class="sub">Invite</div></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="web">
+      <h2 id="web">Websites</h2>
+      <div class="grid">
+        <a class="link" href="http://www.shaunapple.com" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2c-1.7 0-3.2.6-4.4 1.6L11 9v9.9A8 8 0 0 0 20 12h-6V4Z"/></svg>
+          <div class="grow"><div class="label">shaunapple.com</div><div class="sub">Personal site</div></div>
+        </a>
+        <a class="link" href="http://www.loveacrossborders.com" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.2-4.3-9.5-8.3C.9 10.1 2 6.9 4.9 6.2 7.1 5.6 8.8 6.9 10 8c1.2-1.1 2.9-2.4 5.1-1.8 2.9.7 4 3.9 2.4 6.5C19.2 16.7 12 21 12 21Z"/></svg>
+          <div class="grow"><div class="label">loveacrossborders.com</div><div class="sub">Publishing</div></div>
+        </a>
+        <a class="link" href="https://lifeexperience.github.io/" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v6H4V4Zm0 8h7v8H4v-8Zm9 0h7v8h-7v-8Z"/></svg>
+          <div class="grow"><div class="label">GitHub Pages Hub</div><div class="sub">lifeexperience.github.io</div></div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="watermark">© <span id="year"></span> Shaun J Apple · All rights reserved.</div>
+      <div class="copyright">Watermark: “Shaun J Apple” on all assets</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
 
