@@ -67,6 +67,8 @@
 
     footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
     .copyright{margin-top:6px;font-size:12px;opacity:.9}
+  .mascot{width:96px;height:96px;border-radius:50%;box-shadow:var(--shadow);display:block}
+    @media(min-width:780px){.mascot{width:120px;height:120px}}
   </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK3QD8JSWK"></script>
@@ -91,15 +93,23 @@
         <label class="avatar-thumb" for="avatarFile" aria-label="Upload a custom photo" title="Upload a custom photo"><img src="images/olympus_square_512.jpg" alt="Upload icon"/></label>
         <input id="avatarFile" type="file" accept="image/*" style="position:absolute;left:-9999px;width:1px;height:1px;" />
       </div>
-      <div class="cta-row" role="group" aria-label="Primary actions">
-        <a class="link email" href="#" data-u="shaunapple" data-d="gmail.com" aria-label="Email Shaun">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 11 4 6.01V6h16ZM4 18V8l8 5 8-5v10H4Z"/></svg>
-          <div class="grow"><div class="label">Email</div><div class="sub">shaunapple [at] gmail [dot] com</div></div>
-          <span class="pill">Contact</span>
-        </a>
-        
-      </div>
+      <img class="mascot" src="images/mascot_circle_512.png" alt="Shaun Apple mascot" onerror="this.onerror=null;this.src='images/mascot_square_512.jpg'"/>
+      <div class="cta-row" role="group" aria-label="Primary actions"></div>
     </header>
+
+    <section class="section" aria-labelledby="featured-writing">
+      <h2 id="featured-writing">Featured Writing</h2>
+      <div class="grid">
+        <a class="link" href="https://substack.com/@shaunapple" target="_blank" rel="noopener" data-ev="Substack">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4h18v3H3V4Zm0 5h18v3H3V9Zm0 5h11v6l-4-2-4 2v-6Z"/></svg>
+          <div class="grow"><div class="label">Substack</div><div class="sub">Read & subscribe</div></div>
+        </a>
+        <a class="link" href="https://medium.com/@shaunapple" target="_blank" rel="noopener" data-ev="Medium">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Zm6 5a5 5 0 1 0 10 0 5 5 0 0 0-10 0ZM5 8h2v8H5V8Z"/></svg>
+          <div class="grow"><div class="label">Medium</div><div class="sub">@shaunapple</div></div>
+        </a>
+      </div>
+    </section>
 
     <section class="section" aria-labelledby="support">
       <h2 id="support">Support & Memberships</h2>
@@ -137,13 +147,13 @@
       <div class="section" style="margin-top:14px">
         <h2>Orchard Tiers</h2>
         <div class="stack">
-          <div class="tier">$1</div><div class="sub">Roots in the Orchard. Name in the Supporters’ Grove (opt‑in).</div></div>
-          <div class="tier">$1</div><div class="sub">Pushes the next finished page toward release. Apple Leaves Keepsake.</div></div>
-          <div class="tier">$1</div><div class="sub">Funds accessibility & reach. Name + short dedication in the Grove.</div></div>
-          <div class="tier">$1</div><div class="sub">Personal 2–4 line poem or reflection (when it feels right) + top Grove placement.</div></div>
-          <div class="tier">$1</div><div class="sub">Add a phrase/dedication to the Acknowledgments Archive.</div></div>
-          <div class="tier">$1</div><div class="sub">Listed as a Founder in the Grove + recorded spoken dedication (public or private).</div></div>
-          <div class="tier">$1</div><div class="sub">Underwrite a release (memoir or poetry). Dedication across that work’s archive pages & announcements.</div></div>
+          <div class="tier"><div class="tname">Seed Planter</div><div class="sub">Roots in the Orchard. Name in the Supporters’ Grove (opt‑in).</div></div>
+          <div class="tier"><div class="tname">Page Turner</div><div class="sub">Pushes the next finished page toward release. Apple Leaves Keepsake.</div></div>
+          <div class="tier"><div class="tname">Branch Builder</div><div class="sub">Funds accessibility & reach. Name + short dedication in the Grove.</div></div>
+          <div class="tier"><div class="tname">Story Sustainer</div><div class="sub">Personal 2–4 line poem or reflection (when it feels right) + top Grove placement.</div></div>
+          <div class="tier"><div class="tname">Legacy Patron</div><div class="sub">Add a phrase/dedication to the Acknowledgments Archive.</div></div>
+          <div class="tier"><div class="tname">Life Orchard Founder</div><div class="sub">Listed as a Founder in the Grove + recorded spoken dedication (public or private).</div></div>
+          <div class="tier"><div class="tname">Eons Benefactor</div><div class="sub">Underwrite a release (memoir or poetry). Dedication across that work’s archive pages & announcements.</div></div>
           <p class="note">Recognition is timeless. Public, initials, or anonymous — your call.</p>
         </div>
       </div>
@@ -204,33 +214,24 @@
 
     <footer>
       <div class="note">“Because of you, this isn’t just my story. It’s ours.”</div>
+      <div class="cta-row" style="justify-content:center;margin-top:10px">
+        <a id="copyEmail" class="link" href="#" role="button" aria-label="Copy my email">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 11 4 6.01V6h16ZM4 18V8l8 5 8-5v10H4Z"/></svg>
+          <div class="grow"><div class="label">Email</div><div class="sub" id="emailMask">shaunapple [at] gmail [dot] com</div></div>
+          <span class="pill" id="copyStatus">Copy</span>
+        </a>
+      </div>
       <div class="copyright">© <span id="year"></span> Shaun J Apple · Orchard of Life Experience</div>
     </footer>
   </main>
 
+  
+  
   <script>
+    // Year stamp
     document.getElementById('year').textContent = new Date().getFullYear();
-    (function(){
-      var el = document.querySelector('a.link.email');
-      if(!el) return; var u = el.getAttribute('data-u'); var d = el.getAttribute('data-d');
-      el.href = 'mailto:'+u+'@'+d;
-    })();
-    (function(){
-      var avatar = document.querySelector('.avatar-img');
-      document.querySelectorAll('.avatar-thumb').forEach(function(btn){
-        btn.addEventListener('click', function(){
-          var src = this.getAttribute('data-src'); if(src && avatar) avatar.src = src;
-        });
-      });
-    })();
-  </script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    (function(){
-      var el = document.querySelector('a.link.email');
-      if(!el) return; var u = el.getAttribute('data-u'); var d = el.getAttribute('data-d');
-      el.href = 'mailto:'+u+'@'+d;
-    })();
+
+    // Avatar picker + upload with persistence
     (function(){
       var avatar = document.querySelector('.avatar-img');
       var stored = localStorage.getItem('orchardAvatar');
@@ -250,26 +251,29 @@
         });
       }
     })();
+
+    // Outbound click tracking (GA4)
     (function(){
-      function track(label){
-        if(typeof gtag !== 'function') return; 
-        gtag('event', 'click', { event_category: 'outbound', event_label: label });
-      }
-      document.querySelectorAll('a.link[data-ev]').forEach(function(a){
-        a.addEventListener('click', function(){ track(this.getAttribute('data-ev')); });
-      });
-      var map = {
-        'https://www.patreon.com/c/ShaunApple':'Patreon',
-        'https://ko-fi.com/shaunapple':'Ko-fi',
-        'https://buymeacoffee.com/shaunapple':'BuyMeACoffee',
-        'https://paypal.me/courage':'PayPal'
-      };
-      document.querySelectorAll('a.link[href]').forEach(function(a){
-        var href = a.getAttribute('href'); if(map[href]){
-          a.addEventListener('click', function(){ track(map[href]); });
-        }
+      function track(label){ if(typeof gtag !== 'function') return; gtag('event', 'click', { event_category: 'outbound', event_label: label }); }
+      document.querySelectorAll('a.link[data-ev]').forEach(function(a){ a.addEventListener('click', function(){ track(this.getAttribute('data-ev')); }); });
+      var map = { 'https://www.patreon.com/c/ShaunApple':'Patreon','https://ko-fi.com/shaunapple':'Ko-fi','https://buymeacoffee.com/shaunapple':'BuyMeACoffee','https://paypal.me/courage':'PayPal' };
+      document.querySelectorAll('a.link[href]').forEach(function(a){ var href = a.getAttribute('href'); if(map[href]){ a.addEventListener('click', function(){ track(map[href]); }); } });
+    })();
+
+    // Click-to-copy email (keeps address out of HTML)
+    (function(){
+      var link = document.getElementById('copyEmail');
+      var status = document.getElementById('copyStatus');
+      if(!link || !navigator.clipboard) return;
+      var full = 'shaunapple' + '@' + 'gmail.com';
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        navigator.clipboard.writeText(full).then(function(){
+          if(status){ status.textContent = 'Copied!'; setTimeout(function(){ status.textContent = 'Copy'; }, 1500); }
+        });
       });
     })();
   </script>
 </body>
 </html>
+
