@@ -16,7 +16,7 @@
 :root{--bg:#0f0f12;--text:#f6f7fb;--muted:#b9bcc7;--card:#17171b;--ring:rgba(255,255,255,.16);--brand:#27d17a;--brand2:#9bd7ff;--ctaText:#062215;--accent:#ffd166}
 main[data-brand="orchard"]{--brand:#b91c1c;--brand2:#d97706;--ctaText:#fff7f0}
 main[data-brand="keeping"]{--brand:#27d17a;--brand2:#9bd7ff;--ctaText:#062215}
-*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:radial-gradient(1100px 900px at 75% -10%,#1b1b22 0%,var(--bg) 60%);color:var(--text);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{max-width:1040px;margin:0 auto;padding:22px 16px 72px}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:radial-gradient(1100px 900px at 75% -10%,#1b1b22 0%,var(--bg) 60%);color:var(--text);-webkit-font-smoothing:antialiased}.wrap{max-width:1040px;margin:0 auto;padding:22px 16px 72px}
 header.top{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand-toggle{display:flex;gap:6px;background:var(--card);border:1px solid var(--ring);padding:6px;border-radius:12px}.brand-toggle button{appearance:none;border:0;background:transparent;color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer}.brand-toggle button[aria-pressed="true"]{background:#22222a}
 .hero{text-align:center;padding:12px 0 10px}.eyebrow{color:var(--muted);font-size:.95rem}h1{font-size:clamp(2.1rem,5vw,3.1rem);margin:8px 0 6px}.tag{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--muted);margin:8px auto 18px;max-width:42ch}
 .avatar{width:128px;height:128px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:#fff;font-weight:800;letter-spacing:.5px;box-shadow:0 10px 30px rgba(0,0,0,.35);position:relative;overflow:hidden;margin:10px auto}.avatar-img{width:100%;height:100%;object-fit:cover;display:block}.avatar-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:6px}.avatar-thumb{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid color-mix(in srgb,var(--brand) 35%,var(--card));cursor:pointer;transition:transform .15s ease,border-color .15s ease}.avatar-thumb img{width:100%;height:100%;object-fit:cover;display:block}.avatar-thumb:hover{transform:translateY(-2px);border-color:var(--brand)}
@@ -54,8 +54,7 @@ footer{margin-top:36px;color:var(--muted);font-size:.95rem;text-align:center}.tr
         <button class="avatar-thumb" data-src="images/mascot_circle_512.png" aria-label="Use mascot image"><img src="images/mascot_circle_512.png" alt="Mascot thumbnail"></button>
         <button class="avatar-thumb" data-src="images/staycurious_square_512.jpg" aria-label="Use Stay Curious portrait"><img src="images/staycurious_square_512.jpg" alt="Stay Curious portrait thumbnail"></button>
         <button class="avatar-thumb" data-src="images/olympus_square_512.jpg" aria-label="Use Olympus portrait"><img src="images/olympus_square_512.jpg" alt="Olympus portrait thumbnail"></button>
-        <button class="avatar-thumb" data-src="images/naradeer_square_512.jpg" aria-label="Use Nara Deer portrait"><img src="images/naradeer_square_512.jpg" alt="Nara Deer portrait thumbnail"></button>
-        <label class="avatar-thumb" for="avatarFile" aria-label="Upload a custom photo" title="Upload a custom photo"><img src="images/mascot_circle_512.png" alt="Upload icon"/></label>
+        <button class="avatar-mages/mascot_circle_512.png" alt="Upload icon"/></label>
         <input id="avatarFile" type="file" accept="image/*" style="position:absolute;left:-9999px;width:1px;height:1px;" />
       </div>
 
@@ -68,10 +67,9 @@ footer{margin-top:36px;color:var(--muted);font-size:.95rem;text-align:center}.tr
       </div>
 
       <div class="cta-row" aria-label="Primary actions">
-        <a id="primary-cta" class="btn" href="https://www.patreon.com/c/ShaunApple" data-src="hub_hero_primary" rel="noopener" aria-label="Give with love on Patreon">Give with love</a>
-        <a class="btn btn-secondary" href="https://www.patreon.com/c/ShaunApple" data-src="hub_hero_orchard" rel="noopener" aria-label="Join the Orchard membership">Enter the Orchard</a>
+        <a ids="btn btn-secondary" href="https://www.patreon.com/c/ShaunApple" data-src="hub_hero_orchard" rel="noopener" aria-label="Join the Orchard membership">Enter the Orchard</a>
         <a class="btn btn-secondary" href="#books" aria-label="See the books">Books, A Life Experience • SWAY • A Double Star System</a>
-        <a class="btn btn-secondary" href="https://paypal.me/courage" data-src="hub_hero_paypal" rel="noopener" aria-label="One time gift on PayPal">One time gift on PayPal</a>
+     e gift on PayPal">One time gift on PayPal</a>
         <a class="btn btn-secondary" href="#about" aria-label="About the movement" id="aboutBtn">About The Keeping and the Orchard</a>
       </div>
       <p class="trust">Cancel anytime. Receipts provided. Recognition can be private or public. Accessibility first when feasible.</p>
@@ -322,4 +320,5 @@ footer{margin-top:36px;color:var(--muted);font-size:.95rem;text-align:center}.tr
   </script>
 </body>
 </html>
+
 
