@@ -9,69 +9,10 @@
   <meta property="og:description" content="Support, books, writing, socials, and recognition in one place. Join to keep this story alive." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lifeexperience.github.io/" />
+  <meta property="og:image" content="images/mascot_circle_512.png" />
   <meta name="theme-color" content="#27d17a" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍎</text></svg>">
-  <style>
-    :root {
-      --bg:#0f0f12; --text:#f6f7fb; --muted:#b9bcc7; --card:#17171b; --ring:rgba(255,255,255,.16);
-      --brand:#27d17a; --brand2:#9bd7ff; --ctaText:#062215; --accent:#ffd166;
-    }
-    /* Brand palettes that switch with data-brand */
-    main[data-brand="keeping"] { --brand:#b91c1c; --brand2:#d97706; --ctaText:#fff7f0; }
-    main[data-brand="keeping"] { --brand:#27d17a; --brand2:#9bd7ff; --ctaText:#062215; }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:radial-gradient(1100px 900px at 75% -10%, #1b1b22 0%, var(--bg) 60%); color:var(--text); -webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1040px;margin:0 auto;padding:22px 16px 72px}
-
-    /* Top bar */
-    header.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .brand-toggle{display:flex;gap:6px;background:var(--card);border:1px solid var(--ring);padding:6px;border-radius:12px}
-    .brand-toggle button{appearance:none;border:0;background:transparent;color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer}
-    .brand-toggle button[aria-pressed="true"]{background:#22222a}
-
-    /* Hero */
-    .hero{text-align:center;padding:12px 0 10px}
-    .eyebrow{color:var(--muted);font-size:.95rem}
-    h1{font-size:clamp(2.1rem,5vw,3.1rem);margin:8px 0 6px}
-    .tag{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--muted);margin:8px auto 18px;max-width:42ch}
-
-    /* Avatar block */
-    .avatar{width:112px;height:112px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:#fff;font-weight:800;letter-spacing:.5px;box-shadow:0 10px 30px rgba(0,0,0,.35);position:relative;overflow:hidden;margin:6px auto}
-    .avatar-img{width:100%;height:100%;object-fit:cover;display:block}
-    .avatar-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:6px}
-    .avatar-thumb{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid color-mix(in srgb,var(--brand) 35%, var(--card));cursor:pointer;transition:transform .15s ease,border-color .15s ease}
-    .avatar-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .avatar-thumb:hover{transform:translateY(-2px);border-color:var(--brand)}
-
-    /* Toggles */
-    .toggle{display:inline-flex;gap:6px;background:var(--card);padding:6px;border-radius:14px;border:1px solid var(--ring)}
-    .toggle button{appearance:none;border:0;padding:10px 14px;border-radius:10px;background:transparent;color:var(--text);cursor:pointer}
-    .toggle button[aria-pressed="true"]{background:#22222a}
-
-    /* Buttons */
-    .cta-row{display:grid;gap:12px;grid-template-columns:1fr;max-width:680px;margin:16px auto 10px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:14px;border:1px solid var(--ring);background:linear-gradient(180deg,var(--brand) 0%, color-mix(in srgb,var(--brand) 84%, #000) 100%);color:var(--ctaText);font-weight:700;font-size:1.05rem;box-shadow:0 8px 24px color-mix(in srgb,var(--brand) 25%, transparent)}
-    .btn-secondary{background:#232329;color:var(--text);box-shadow:inset 0 0 0 1px var(--ring);font-weight:600}
-
-    /* Sections */
-    .cluster{display:grid;gap:20px;grid-template-columns:1fr;margin-top:24px}
-    .card{border-radius:16px;background:linear-gradient(180deg,#19191f 0%,#121216 100%);border:1px solid var(--ring);padding:18px;box-shadow:0 6px 22px rgba(0,0,0,.25)}
-    .card h3{margin:0 0 6px;font-size:1.15rem}
-    .card p{margin:4px 0;color:var(--muted)}
-
-    .books{display:grid;gap:16px;grid-template-columns:1fr;margin-top:12px}
-    @media(min-width:680px){.cta-row{grid-template-columns:1fr 1fr}.cluster{grid-template-columns:1fr 1fr}.books{grid-template-columns:repeat(3,1fr)}}
-
-    .divider{height:1px;background:var(--ring);margin:26px 0}
-    .links{display:grid;gap:10px;grid-template-columns:1fr;max-width:820px;margin:0 auto}
-    @media(min-width:760px){.links{grid-template-columns:repeat(3,1fr)}}
-    .links a{padding:12px 14px;border-radius:12px;background:#1a1a20;border:1px solid var(--ring);text-align:center}
-    footer{margin-top:36px;color:var(--muted);font-size:.95rem;text-align:center}
-    .trust{margin-top:12px;color:var(--muted);font-size:.95rem}
-  </style>
+  <link rel="stylesheet" href="styles.css">
   <!-- Google Analytics (optional) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK3QD8JSWK"></script>
   <script>
@@ -82,7 +23,7 @@
   </script>
 </head>
 <body>
-  <main class="wrap" id="top" data-brand="orchard">
+  <main class="wrap" id="top" data-brand="keeping">
     <header class="top" aria-label="Top bar">
       <div class="eyebrow">Shaun J Apple — Life Experience</div>
       <div class="brand-toggle" role="group" aria-label="Choose movement name">
@@ -93,18 +34,19 @@
 
     <section class="hero" aria-labelledby="hero-title">
       <div class="avatar">
-        <img class="avatar-img" src="images/staycurious_square_512.jpg" alt="Portrait of Shaun J Apple beneath a sign that reads Stay Curious" onerror="this.onerror=null;this.src='';" />
+        <img class="avatar-img" src="images/mascot_circle_512.png" alt="Life Experience mascot" onerror="this.onerror=null;this.src='images/mascot_square_512.jpg';" />
       </div>
       <div class="avatar-bar" role="group" aria-label="Choose profile photo">
+        <button class="avatar-thumb" data-src="images/mascot_circle_512.png" aria-label="Use mascot image"><img src="images/mascot_circle_512.png" alt="Mascot thumbnail"></button>
         <button class="avatar-thumb" data-src="images/staycurious_square_512.jpg" aria-label="Use Stay Curious portrait"><img src="images/staycurious_square_512.jpg" alt="Stay Curious portrait thumbnail"></button>
         <button class="avatar-thumb" data-src="images/olympus_square_512.jpg" aria-label="Use Olympus portrait"><img src="images/olympus_square_512.jpg" alt="Olympus portrait thumbnail"></button>
         <button class="avatar-thumb" data-src="images/naradeer_square_512.jpg" aria-label="Use Nara Deer portrait"><img src="images/naradeer_square_512.jpg" alt="Nara Deer portrait thumbnail"></button>
-        <label class="avatar-thumb" for="avatarFile" aria-label="Upload a custom photo" title="Upload a custom photo"><img src="images/olympus_square_512.jpg" alt="Upload icon"/></label>
+        <label class="avatar-thumb" for="avatarFile" aria-label="Upload a custom photo" title="Upload a custom photo"><img src="images/mascot_circle_512.png" alt="Upload icon"/></label>
         <input id="avatarFile" type="file" accept="image/*" style="position:absolute;left:-9999px;width:1px;height:1px;" />
       </div>
 
       <h1 id="hero-title">A rare life. A story worth keeping alive.</h1>
-      <p class="tag" id="hero-sub">Keep this alive, with love. Your gift becomes time, access, and finished work for someone who needs care today.</p>
+      <p class="tag" id="hero-sub">Join The Keeping. Step into the Orchard, our inner circle that keeps this story alive with love. Your gift becomes time, access, and finished work for someone who needs care today.</p>
 
       <div class="toggle" role="group" aria-label="Choose primary support type">
         <button id="monthlyBtn" type="button" aria-pressed="true" aria-controls="primary-cta">Prefer monthly</button>
@@ -112,10 +54,11 @@
       </div>
 
       <div class="cta-row" aria-label="Primary actions">
-        <a id="primary-cta" class="btn" href="https://www.patreon.com/c/ShaunApple?src=hub_primary" rel="noopener" aria-label="Give with love on Patreon">Give with love</a>
+        <a id="primary-cta" class="btn" href="https://www.patreon.com/c/ShaunApple" data-src="hub_hero_primary" rel="noopener" aria-label="Give with love on Patreon">Give with love</a>
+        <a class="btn btn-secondary" href="https://www.patreon.com/c/ShaunApple" data-src="hub_hero_orchard" rel="noopener" aria-label="Join the Orchard membership">Enter the Orchard</a>
         <a class="btn btn-secondary" href="#books" aria-label="See the books">Books, A Life Experience • SWAY • A Double Star System</a>
-        <a class="btn btn-secondary" href="https://paypal.me/courage?src=hub_secondary" rel="noopener" aria-label="One time gift on PayPal">One time gift on PayPal</a>
-        <a class="btn btn-secondary" href="#about" aria-label="About the movement" id="aboutBtn"></a>
+        <a class="btn btn-secondary" href="https://paypal.me/courage" data-src="hub_hero_paypal" rel="noopener" aria-label="One time gift on PayPal">One time gift on PayPal</a>
+        <a class="btn btn-secondary" href="#about" aria-label="About the movement" id="aboutBtn">About The Keeping and the Orchard</a>
       </div>
       <p class="trust">Cancel anytime. Receipts provided. Recognition can be private or public. Accessibility first when feasible.</p>
     </section>
@@ -149,7 +92,7 @@
       </article>
       <article class="card">
         <h3 id="benefits-title">What supporters often receive</h3>
-        <p>Early peeks. Audio postcards. Truth notes. Community copies. Access editions when feasible. Open notebook moments. Recognition on our wall. Seasonal gifts. Gentle podcast episodes as capacity allows.</p>
+        <p>Early peeks. Audio postcards. Truth notes. Community copies. Access editions when feasible. Open notebook moments. Recognition on the Wall of Keeping and in the Orchard Grove. Seasonal gifts. Gentle podcast episodes as capacity allows.</p>
         <p class="trust">Plain promise. No quotas, no filler. I share work I can stand behind, and I share it with care.</p>
       </article>
       <article class="card">
@@ -163,19 +106,19 @@
       <article class="card">
         <h3>Monthly membership</h3>
         <p>Best for steady care. Join on Patreon.</p>
-        <p><a class="btn btn-secondary" href="https://www.patreon.com/c/ShaunApple?src=hub_patron" rel="noopener">Start monthly support on Patreon</a></p>
+        <p><a class="btn btn-secondary" href="https://www.patreon.com/c/ShaunApple" data-src="hub_support_patron" rel="noopener">Start monthly support on Patreon</a></p>
       </article>
       <article class="card">
         <h3>One time gift</h3>
         <p>Give what feels kind, give what feels generous.</p>
-        <p><a class="btn btn-secondary" href="https://paypal.me/courage?src=hub_paypal" rel="noopener">Give once on PayPal</a></p>
+        <p><a class="btn btn-secondary" href="https://paypal.me/courage" data-src="hub_support_paypal" rel="noopener">Give once on PayPal</a></p>
       </article>
       <article class="card">
         <h3>Small kindness, big help</h3>
         <p>Ko fi and Buy Me a Coffee keep pages moving.</p>
         <p class="links">
-          <a href="https://ko-fi.com/shaunapple?src=hub_kofi" rel="noopener">Ko fi</a>
-          <a href="https://buymeacoffee.com/shaunapple?src=hub_bmac" rel="noopener">Buy Me a Coffee</a>
+          <a href="https://ko-fi.com/shaunapple" data-src="hub_support_kofi" rel="noopener">Ko fi</a>
+          <a href="https://buymeacoffee.com/shaunapple" data-src="hub_support_bmac" rel="noopener">Buy Me a Coffee</a>
         </p>
       </article>
     </section>
@@ -185,12 +128,17 @@
       <article class="card">
         <h3>Substack</h3>
         <p>Read and subscribe for chapters and poems.</p>
-        <p><a class="btn btn-secondary" href="https://substack.com/@shaunapple?src=hub" rel="noopener">Go to Substack</a></p>
+        <p><a class="btn btn-secondary" href="https://substack.com/@shaunapple" data-src="hub_writing_substack" rel="noopener">Go to Substack</a></p>
       </article>
       <article class="card">
         <h3>Medium</h3>
         <p>Essays, poems, and reflections.</p>
-        <p><a class="btn btn-secondary" href="https://medium.com/@shaunapple?src=hub" rel="noopener">Go to Medium</a></p>
+        <p><a class="btn btn-secondary" href="https://medium.com/@shaunapple" data-src="hub_writing_medium" rel="noopener">Go to Medium</a></p>
+      </article>
+      <article class="card">
+        <h3>Orchard tiers in The Keeping</h3>
+        <p>Choose what feels right. Recognition can be public or private.</p>
+        <p>Seed Planter • Page Mover • Branch Builder • Witness • Sustainer • Guardian • Founder • Benefactor</p>
       </article>
     </section>
 
@@ -198,13 +146,13 @@
       <h2 id="socials-title">Social links</h2>
       <article class="card">
         <div class="links">
-          <a href="https://x.com/ShaunApple" rel="noopener">X</a>
-          <a href="https://www.instagram.com/withinmylove/" rel="noopener">Instagram</a>
-          <a href="https://www.youtube.com/@ShaunApple" rel="noopener">YouTube</a>
-          <a href="https://www.tiktok.com/@PublishPoems" rel="noopener">TikTok</a>
-          <a href="https://www.twitch.tv/lifesubstance" rel="noopener">Twitch</a>
-          <a href="https://www.linkedin.com/in/lifeexperience/" rel="noopener">LinkedIn</a>
-          <a href="https://discord.gg/G5zb2ySFc5" rel="noopener">Discord</a>
+          <a href="https://x.com/ShaunApple" data-src="hub_social_x" rel="noopener">X</a>
+          <a href="https://www.instagram.com/withinmylove/" data-src="hub_social_instagram" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@ShaunApple" data-src="hub_social_youtube" rel="noopener">YouTube</a>
+          <a href="https://www.tiktok.com/@PublishPoems" data-src="hub_social_tiktok" rel="noopener">TikTok</a>
+          <a href="https://www.twitch.tv/lifesubstance" data-src="hub_social_twitch" rel="noopener">Twitch</a>
+          <a href="https://www.linkedin.com/in/lifeexperience/" data-src="hub_social_linkedin" rel="noopener">LinkedIn</a>
+          <a href="https://discord.gg/G5zb2ySFc5" data-src="hub_social_discord" rel="noopener">Discord</a>
         </div>
       </article>
     </section>
@@ -214,25 +162,26 @@
       <article class="card">
         <h3>shaunapple.com</h3>
         <p>Personal site and contact.</p>
-        <p><a class="btn btn-secondary" href="http://www.shaunapple.com" rel="noopener">Visit site</a></p>
+        <p><a class="btn btn-secondary" href="http://www.shaunapple.com" data-src="hub_sites_personal" rel="noopener">Visit site</a></p>
       </article>
       <article class="card">
         <h3>Love Across Borders</h3>
         <p>Publishing home.</p>
-        <p><a class="btn btn-secondary" href="http://www.loveacrossborders.com" rel="noopener">Visit site</a></p>
+        <p><a class="btn btn-secondary" href="http://www.loveacrossborders.com" data-src="hub_sites_lab" rel="noopener">Visit site</a></p>
       </article>
       <article class="card">
         <h3>GitHub Pages Hub</h3>
         <p>All links in one place.</p>
-        <p><a class="btn btn-secondary" href="https://lifeexperience.github.io/" rel="noopener">Open hub</a></p>
+        <p><a class="btn btn-secondary" href="https://lifeexperience.github.io/" data-src="hub_sites_hub" rel="noopener">Open hub</a></p>
       </article>
     </section>
 
     <footer aria-label="Footer">
-      <p id="footer-brand">Welcome to the Orchard. Your name can appear on the Orchard Wall, public or private.</p>
+      <p id="footer-brand">Welcome to The Keeping. Step into the Orchard. Recognition on the Wall of Keeping or in the Orchard Grove, public or private.</p>
       <div class="links" aria-label="More links">
-        <a href="mailto:shaunapple@gmail.com" rel="noopener">Email</a>
-        <a href="#top" aria-label="Back to top">Back to top</a>
+        <a href="mailto:shaunapple@gmail.com" data-src="hub_footer_email" rel="noopener">Email</a>
+        <button id="copyEmail" type="button" aria-label="Copy email to clipboard">Copy email</button>
+        <a href="#top" aria-label="Back to top" data-src="hub_footer_top">Back to top</a>
       </div>
       <p class="trust" id="emailMask">shaunapple [at] gmail [dot] com · click Email above to copy</p>
     </footer>
@@ -243,12 +192,12 @@
     const brands = {
       orchard: {
         aboutBtn: 'About the Orchard',
-        footer: 'Welcome to the Orchard. Your name can appear on the Orchard Wall, public or private.',
-        wall: 'Orchard Wall'
+        footer: 'Welcome to the Orchard. Your name can appear in the Orchard Grove and on the Wall of Keeping, public or private.',
+        wall: 'Orchard Grove'
       },
       keeping: {
-        aboutBtn: 'About The Keeping',
-        footer: 'Welcome to The Keeping. Your name can appear on the Wall of Keeping, public or private.',
+        aboutBtn: 'About The Keeping and the Orchard',
+        footer: 'Welcome to The Keeping. Step into the Orchard. Recognition on the Wall of Keeping or in the Orchard Grove, public or private.',
         wall: 'Wall of Keeping'
       }
     };
@@ -266,6 +215,11 @@
       if(footerBrand) footerBrand.textContent = b.footer;
       orchardMode.setAttribute('aria-pressed', mode==='orchard' ? 'true':'false');
       keepingMode.setAttribute('aria-pressed', mode==='keeping' ? 'true':'false');
+      const themeMeta = document.querySelector('meta[name="theme-color"]');
+      if(themeMeta){
+        const brandColor = getComputedStyle(root).getPropertyValue('--brand').trim() || '#27d17a';
+        themeMeta.setAttribute('content', brandColor);
+      }
     }
 
     orchardMode.addEventListener('click', ()=>setBrand('orchard'));
@@ -277,13 +231,13 @@
     const onetimeBtn = document.getElementById('onetimeBtn');
 
     function setMonthly(){
-      primary.href = 'https://www.patreon.com/c/ShaunApple?src=hub_primary';
+      primary.href = 'https://www.patreon.com/c/ShaunApple';
       primary.setAttribute('aria-label','Give with love on Patreon');
       monthlyBtn.setAttribute('aria-pressed','true');
       onetimeBtn.setAttribute('aria-pressed','false');
     }
     function setOneTime(){
-      primary.href = 'https://paypal.me/courage?src=hub_primary';
+      primary.href = 'https://paypal.me/courage';
       primary.setAttribute('aria-label','Give with love on PayPal');
       monthlyBtn.setAttribute('aria-pressed','false');
       onetimeBtn.setAttribute('aria-pressed','true');
@@ -291,6 +245,10 @@
 
     monthlyBtn.addEventListener('click', setMonthly);
     onetimeBtn.addEventListener('click', setOneTime);
+
+    // Defaults
+    setBrand('keeping');
+    setMonthly();
 
     // Avatar picker + upload with persistence
     (function(){
@@ -316,9 +274,37 @@
       }
     })();
 
-    // Defaults
-    setBrand('orchard'); // default to Orchard for Apple synergy
-    setMonthly(); // default to monthly
+    // Outbound click tracking + auto ?src= param injection
+    (function(){
+      function track(label){ try{ if(typeof gtag==='function'){ gtag('event','click',{event_category:'outbound',event_label:label}); } }catch(e){} }
+      function slugify(s){ return (s||'link').toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,''); }
+      function sectionIdFor(el){ const sec = el.closest('section'); if(sec && sec.id) return sec.id; if(el.closest('.hero')) return 'hero'; return 'page'; }
+      function computeSrc(el){ if(el.dataset && el.dataset.src) return el.dataset.src; const sec = sectionIdFor(el); const label = slugify(el.getAttribute('aria-label') || el.textContent); return 'hub_'+sec+'_'+label; }
+      document.addEventListener('click', function(ev){
+        const a = ev.target.closest('a[href^="http"]');
+        if(!a) return;
+        try{
+          const url = new URL(a.href, location.href);
+          if(!url.searchParams.has('src')){ url.searchParams.set('src', computeSrc(a)); a.href = url.toString(); }
+          const label = (a.textContent||a.getAttribute('aria-label')||url.hostname).trim();
+          track(label + ' -> ' + url.toString());
+        }catch(e){}
+      }, true);
+    })();
+
+    // Copy email button
+    (function(){
+      const btn = document.getElementById('copyEmail');
+      if(!btn || !navigator.clipboard) return;
+      const email = 'shaunapple' + '@' + 'gmail.com';
+      btn.addEventListener('click', ()=>{
+        navigator.clipboard.writeText(email).then(()=>{
+          const prev = btn.textContent;
+          btn.textContent = 'Copied';
+          setTimeout(()=>{ btn.textContent = prev; }, 1500);
+        });
+      });
+    })();
   </script>
 </body>
 </html>
