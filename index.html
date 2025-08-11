@@ -1,72 +1,95 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Essentials -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shaun J Apple — Life Experience · Link Hub</title>
-  <meta name="description" content="A rare life. A story worth keeping alive. Read the work, see the books, and give with love to keep the story going." />
-  <meta property="og:title" content="Shaun J Apple — Life Experience · Link Hub" />
-  <meta property="og:description" content="Substack, Medium, books, support, and recognition in one place. Join The Keeping and the Orchard to keep this story alive." />
+  <meta name="robots" content="index,follow" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Shaun J Apple — Life Experience | A rare life. A story worth keeping alive.</title>
+  <meta name="description" content="Read chapters and poems, see the books, and give with love to keep A Life Experience, SWAY, and A Double Star System alive. Low vision. High honesty. Truth told with care." />
+
+  <!-- Canonical & Preview -->
+  <link rel="canonical" href="https://lifeexperience.github.io/" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shaun J Apple — Life Experience" />
+  <meta property="og:description" content="Substack, Medium, books, and ways to support in one place. Join The Keeping and the Orchard to keep this story alive." />
   <meta property="og:url" content="https://lifeexperience.github.io/" />
-  <meta property="og:image" content="images/mascot_circle_512.png" />
+  <meta property="og:image" content="https://lifeexperience.github.io/images/mascot_circle_512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shaun J Apple — Life Experience" />
+  <meta name="twitter:description" content="A rare life. A story worth keeping alive. Truth told with care." />
+  <meta name="twitter:image" content="https://lifeexperience.github.io/images/mascot_circle_512.png" />
   <meta name="theme-color" content="#27d17a" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍎</text></svg>">
+
+  <!-- Icons -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='0.9em'%20font-size='90'%3E%F0%9F%8D%8E%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="images/mascot_circle_512.png" />
+
+  <!-- Performance hints -->
+  <link rel="preload" as="image" href="images/mascot_circle_512.png" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
   <style>
     :root{
-      --bg:#0f1116; --text:#f7f8fc; --muted:#b8bdc9; --card:#171a20; --ring:rgba(255,255,255,.14);
+      --bg:#0f1116; --text:#f7f8fc; --muted:#b8bdc9; --ring:rgba(255,255,255,.14);
       --brand:#27d17a; --brand2:#9bd7ff; --ctaText:#062215;
       --link:#7bf2b7; --link-visited:#59c893; --link-hover:#b2ffd6;
-      /* Palette for section kinds */
-      --c-writing1:#3a86ff; --c-writing2:#a6c8ff;
-      --c-books1:#bb86fc; --c-books2:#e7c6ff;
-      --c-support1:#00c853; --c-support2:#b9f6ca;
-      --c-onetime1:#ff6d00; --c-onetime2:#ffd9a0;
-      --c-small1:#ff477e; --c-small2:#ffb3c6;
-      --c-about1:#00bcd4; --c-about2:#b2ebf2;
-      --c-social1:#ffd166; --c-social2:#ffe6a6;
+      /* Section palette */
+      --c-writing2:#a6c8ff; --c-books2:#e7c6ff; --c-support2:#b9f6ca; --c-onetime2:#ffd9a0; --c-small2:#ffb3c6; --c-about2:#b2ebf2; --c-social2:#ffe6a6;
+      --glass:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0; background:radial-gradient(1100px 900px at 75% -10%,#1c2030 0%,var(--bg) 60%);
-      color:var(--text); font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; -webkit-font-smoothing:antialiased;
+      color:var(--text); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; -webkit-font-smoothing:antialiased;
     }
-    .wrap{max-width:1100px;margin:0 auto;padding:22px 16px 90px}
+    .wrap{max-width:1120px;margin:0 auto;padding:22px 16px 96px}
 
     a{color:var(--link); text-decoration:underline; text-underline-offset:3px}
     a:visited{color:var(--link-visited)}
     a:hover{color:var(--link-hover)}
 
-    .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:14px;border:1px solid var(--ring);text-decoration:none}
+    .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:14px 18px;border-radius:14px;border:1px solid var(--ring);text-decoration:none}
     .btn{background:linear-gradient(180deg,var(--brand),color-mix(in srgb,var(--brand) 84%,#000));color:var(--ctaText);font-weight:750}
     .btn-secondary{background:#232834;color:var(--text);box-shadow:inset 0 0 0 1px var(--ring);font-weight:650}
+    .btn:focus-visible,.btn-secondary:focus-visible{outline:3px solid color-mix(in srgb,var(--brand) 60%, #fff 40%); outline-offset:2px}
 
     header.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
     .eyebrow{color:var(--muted);font-size:.95rem}
-    .hero{text-align:center;padding:12px 0 10px}
+
+    .hero{position:relative;text-align:center;padding:14px 0 12px}
+    .hero::before,.hero::after{content:"";position:absolute;inset:auto;pointer-events:none;filter:blur(40px);opacity:.6}
+    .hero::before{top:-30px;left:5%;width:220px;height:220px;background:radial-gradient(closest-side,#27d17a44,transparent)}
+    .hero::after{top:-60px;right:6%;width:300px;height:300px;background:radial-gradient(closest-side,#9bd7ff40,transparent)}
+
     h1{font-size:clamp(2.1rem,5vw,3.2rem);margin:10px 0 8px}
-    .tag{font-size:clamp(1.06rem,2.2vw,1.25rem);color:var(--muted);margin:8px auto 16px;max-width:58ch}
+    .tag{font-size:clamp(1.06rem,2.2vw,1.22rem);color:var(--muted);margin:8px auto 16px;max-width:58ch}
+
     .chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:8px auto 8px}
     .chip{font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;background:#22293a;border:1px solid var(--ring);color:var(--muted)}
 
     .avatar{width:132px;height:132px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:#fff;font-weight:800;letter-spacing:.5px;box-shadow:0 10px 30px rgba(0,0,0,.35);position:relative;overflow:hidden;margin:10px auto}
     .avatar-img{width:100%;height:100%;object-fit:cover;display:block}
     .avatar-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-    .avatar-thumb{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid color-mix(in srgb,var(--brand) 35%, var(--card));cursor:pointer;transition:transform .15s ease,border-color .15s ease}
+    .avatar-thumb{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid color-mix(in srgb,var(--brand) 35%, #181d29);cursor:pointer;transition:transform .15s ease,border-color .15s ease}
     .avatar-thumb img{width:100%;height:100%;object-fit:cover;display:block}
     .avatar-thumb:hover{transform:translateY(-2px);border-color:var(--brand)}
 
-    .cta-row{display:grid;gap:12px;grid-template-columns:1fr;max-width:1000px;margin:18px auto 8px}
-    @media(min-width:960px){.cta-row{grid-template-columns:repeat(4,1fr)}}
+    .cta-row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));max-width:1000px;margin:18px auto 8px}
 
-    .divider{height:1px;background:var(--ring);margin:28px 0}
+    .divider{height:1px;background:var(--ring);margin:30px 0}
 
     /* Cards */
     .cluster{display:grid;gap:18px;grid-template-columns:1fr;margin-top:24px}
     @media(min-width:980px){.cluster{grid-template-columns:repeat(3,1fr)}}
-    .card{border-radius:16px;border:1px solid var(--ring);padding:18px;box-shadow:0 6px 22px rgba(0,0,0,.25)}
-    .card h3{margin:0 0 6px;font-size:1.14rem}
+    .card{border-radius:16px;border:1px solid var(--ring);padding:18px;box-shadow:0 12px 28px rgba(0,0,0,.28);background:var(--glass)}
+    .card h2,.card h3{margin:0 0 6px}
+    .card h3{font-size:1.14rem}
     .card p{margin:4px 0;color:var(--text)}
     .sub{color:var(--muted)}
 
@@ -85,10 +108,20 @@
     @media(min-width:760px){.links{grid-template-columns:repeat(3,1fr)}}
     .links a,.links button{padding:12px 14px;border-radius:12px;background:#1a1f2b;border:1px solid var(--ring);text-align:center;text-decoration:none}
 
+    /* Fancy card borders on hover for visual delight */
+    .card{position:relative}
+    .card::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(120deg,transparent,rgba(255,255,255,.18),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.0;transition:opacity .2s ease}
+    .card:where(:hover,:focus-within)::after{opacity:1}
+
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce){
+      .avatar-thumb:hover{transform:none}
+      .card::after{transition:none}
+    }
+
     footer{margin-top:40px;color:var(--muted);font-size:.95rem;text-align:center}
     .note{margin-top:8px;color:var(--muted)}
     .copyright{margin-top:6px;font-size:.9rem;opacity:.9}
-    .pill{font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#ffd166}
   </style>
   <!-- Google Analytics (optional) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK3QD8JSWK"></script>
@@ -100,19 +133,19 @@
   </script>
 </head>
 <body>
-  <main class="wrap" id="top">
+  <main class="wrap" id="top" itemscope itemtype="https://schema.org/CollectionPage">
     <header class="top" aria-label="Top bar">
-      <div class="eyebrow">Shaun J Apple — Life Experience</div>
+      <div class="eyebrow" itemprop="name">Shaun J Apple — Life Experience</div>
     </header>
 
     <section class="hero" aria-labelledby="hero-title">
       <div class="avatar">
-        <img class="avatar-img" src="images/mascot_circle_512.png" alt="Life Experience mascot" onerror="this.onerror=null;this.src='images/mascot_square_512.jpg';" />
+        <img class="avatar-img" src="images/mascot_circle_512.png" alt="Life Experience mascot" width="132" height="132" />
       </div>
       <div class="avatar-bar" role="group" aria-label="Author portraits">
-        <button class="avatar-thumb" data-src="images/staycurious_square_512.jpg" aria-label="Use Stay Curious portrait"><img src="images/staycurious_square_512.jpg" alt="Stay Curious portrait thumbnail"></button>
-        <button class="avatar-thumb" data-src="images/olympus_square_512.jpg" aria-label="Use Olympus portrait"><img src="images/olympus_square_512.jpg" alt="Olympus portrait thumbnail"></button>
-        <button class="avatar-thumb" data-src="images/naradeer_square_512.jpg" aria-label="Use Nara Deer portrait"><img src="images/naradeer_square_512.jpg" alt="Nara Deer portrait thumbnail"></button>
+        <button class="avatar-thumb" data-src="images/staycurious_square_512.jpg" aria-label="Use Stay Curious portrait"><img src="images/staycurious_square_512.jpg" alt="Stay Curious portrait thumbnail" width="44" height="44" loading="lazy"></button>
+        <button class="avatar-thumb" data-src="images/olympus_square_512.jpg" aria-label="Use Olympus portrait"><img src="images/olympus_square_512.jpg" alt="Olympus portrait thumbnail" width="44" height="44" loading="lazy"></button>
+        <button class="avatar-thumb" data-src="images/naradeer_square_512.jpg" aria-label="Use Nara Deer portrait"><img src="images/naradeer_square_512.jpg" alt="Nara Deer portrait thumbnail" width="44" height="44" loading="lazy"></button>
       </div>
 
       <h1 id="hero-title">A rare life. A story worth keeping alive.</h1>
@@ -125,30 +158,32 @@
         <span class="chip">Give what feels generous.</span>
       </div>
 
-      <div class="cta-row" aria-label="Primary actions">
+      <nav class="cta-row" aria-label="Primary actions">
         <a class="btn" href="https://www.patreon.com/c/ShaunApple" data-src="hero_patreon" rel="noopener" aria-label="Give monthly on Patreon">Give monthly on Patreon</a>
+        <a class="btn btn-secondary" href="https://ko-fi.com/shaunapple" data-src="hero_kofi" rel="noopener" aria-label="Support on Ko-fi">Quick gift on Ko-fi</a>
+        <a class="btn btn-secondary" href="https://buymeacoffee.com/shaunapple" data-src="hero_bmac" rel="noopener" aria-label="Support on Buy Me a Coffee">Quick gift on BMAC</a>
         <a class="btn btn-secondary" href="https://paypal.me/courage" data-src="hero_paypal" rel="noopener" aria-label="Give one time on PayPal">Give one time on PayPal</a>
         <a class="btn btn-secondary" href="https://substack.com/@shaunapple" data-src="hero_substack" rel="noopener" aria-label="Read on Substack">Read on Substack</a>
         <a class="btn btn-secondary" href="https://medium.com/@shaunapple" data-src="hero_medium" rel="noopener" aria-label="Read on Medium">Read on Medium</a>
-      </div>
+      </nav>
 
       <p class="sub">Cancel anytime. Receipts provided. Recognition can be private or public. Accessibility comes first when feasible.</p>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" role="presentation"></div>
 
     <!-- Writing -->
     <section id="writing" class="cluster" aria-labelledby="writing-title">
       <h2 id="writing-title" style="text-align:center"><span class="badge">Read the work</span></h2>
-      <article class="card kind-writing">
-        <h3>Substack</h3>
-        <p>Chapters, poems, and reflections. Subscribe for updates and early peeks.</p>
-        <p><a class="btn btn-secondary" href="https://substack.com/@shaunapple" data-src="writing_substack" rel="noopener">Go to Substack</a></p>
+      <article class="card kind-writing" itemscope itemtype="https://schema.org/Blog">
+        <h3 itemprop="name">Substack</h3>
+        <p itemprop="description">Chapters, poems, and reflections. Subscribe for updates and early peeks.</p>
+        <p><a class="btn btn-secondary" href="https://substack.com/@shaunapple" data-src="writing_substack" rel="noopener" itemprop="url">Go to Substack</a></p>
       </article>
-      <article class="card kind-writing">
-        <h3>Medium</h3>
-        <p>Essays and poems from a rare cross cultural life.</p>
-        <p><a class="btn btn-secondary" href="https://medium.com/@shaunapple" data-src="writing_medium" rel="noopener">Go to Medium</a></p>
+      <article class="card kind-writing" itemscope itemtype="https://schema.org/Blog">
+        <h3 itemprop="name">Medium</h3>
+        <p itemprop="description">Essays and poems from a rare cross cultural life.</p>
+        <p><a class="btn btn-secondary" href="https://medium.com/@shaunapple" data-src="writing_medium" rel="noopener" itemprop="url">Go to Medium</a></p>
       </article>
       <article class="card kind-writing">
         <h3>What supporters often receive</h3>
@@ -157,32 +192,60 @@
       </article>
     </section>
 
-    <!-- Books -->
+    <!-- Books (Requested order: A Double Star System, SWAY, A Life Experience) -->
     <section id="books" class="cluster" aria-labelledby="books-title">
       <h2 id="books-title" style="text-align:center"><span class="badge">Books</span></h2>
-      <article class="card kind-books">
-        <h3>A Life Experience</h3>
-        <p>A memoir of survival and love across borders. Complete and preparing release in print, ebook, and access editions.</p>
+      <article class="card kind-books" itemscope itemtype="https://schema.org/Book">
+        <h3 itemprop="name">A Double Star System</h3>
+        <meta itemprop="inLanguage" content="en" />
+        <p itemprop="description">A companion collection that holds two truths at once. Complete and preparing release.</p>
+        <p class="sub">Buy links</p>
+        <div class="links">
+          <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Amazon coming soon</a>
+          <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Bookshop coming soon</a>
+        </div>
       </article>
-      <article class="card kind-books">
-        <h3>SWAY</h3>
-        <p>Epic poetry about feeling and philosophy. Complete and preparing release.</p>
+      <article class="card kind-books" itemscope itemtype="https://schema.org/Book">
+        <h3 itemprop="name">SWAY</h3>
+        <meta itemprop="inLanguage" content="en" />
+        <p itemprop="description">Epic poetry about feeling and philosophy. Complete and preparing release.</p>
+        <p class="sub">Buy links</p>
+        <div class="links">
+          <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Amazon coming soon</a>
+          <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Bookshop coming soon</a>
+        </div>
       </article>
-      <article class="card kind-books">
-        <h3>A Double Star System</h3>
-        <p>A companion collection that holds two truths at once. Complete and preparing release.</p>
+      <article class="card kind-books" itemscope itemtype="https://schema.org/Book">
+        <h3 itemprop="name">A Life Experience</h3>
+        <meta itemprop="alternateName" content="A Life Experience — The Shaun Apple Story" />
+        <meta itemprop="inLanguage" content="en" />
+        <p class="sub">The Shaun Apple Story</p>
+        <p itemprop="description">A memoir of survival and love across borders. Complete and preparing release in print, ebook, and access editions.</p>
+        <p class="sub">Buy links</p>
+        <div class="links">
+          <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Amazon coming soon</a>
+          <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Bookshop coming soon</a>
+        </div>
       </article>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" role="presentation"></div>
 
     <!-- Support -->
     <section id="support" class="cluster" aria-labelledby="support-title">
       <h2 id="support-title" style="text-align:center"><span class="badge">Support</span></h2>
+      <article class="card kind-small">
+        <h3>Small kindness</h3>
+        <p>You are not buying coffee. You are planting hope. Your kindness becomes finished pages, clear audio, and large type that real people can read.</p>
+        <div class="links">
+          <a href="https://ko-fi.com/shaunapple" data-src="support_kofi" rel="noopener">Ko-fi</a>
+          <a href="https://buymeacoffee.com/shaunapple" data-src="support_bmac" rel="noopener">Buy Me a Coffee</a>
+        </div>
+      </article>
       <article class="card kind-support">
         <h3>Monthly membership</h3>
         <p>This space is a promise. No quotas and no noise. Only pages made with care.</p>
-        <p>Your membership finishes the memoir A Life Experience, preserves SWAY and A Double Star System, and funds large type and audio friendly editions for low vision readers.</p>
+        <p>Your membership finishes the memoir <strong>A Life Experience</strong>, preserves <strong>SWAY</strong> and <strong>A Double Star System</strong>, and funds large type and audio friendly editions for low vision readers.</p>
         <p><a class="btn btn-secondary" href="https://www.patreon.com/c/ShaunApple" data-src="support_patreon" rel="noopener">Start on Patreon</a></p>
         <p class="sub">Tier names that feel like belonging: Seed Planter, Page Turner, Branch Builder, Story Sustainer, Legacy Patron, Founder, Benefactor.</p>
       </article>
@@ -199,17 +262,9 @@
         </ul>
         <p><a class="btn btn-secondary" href="https://paypal.me/courage" data-src="support_paypal" rel="noopener">Give once on PayPal</a></p>
       </article>
-      <article class="card kind-small">
-        <h3>Small kindness</h3>
-        <p>You are not buying coffee. You are planting hope. Your kindness becomes finished pages, clear audio, and large type that real people can read.</p>
-        <div class="links">
-          <a href="https://ko-fi.com/shaunapple" data-src="support_kofi" rel="noopener">Ko fi</a>
-          <a href="https://buymeacoffee.com/shaunapple" data-src="support_bmac" rel="noopener">Buy Me a Coffee</a>
-        </div>
-      </article>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" role="presentation"></div>
 
     <!-- About and Principles -->
     <section id="about" class="cluster" aria-labelledby="about-title">
@@ -228,11 +283,28 @@
       </article>
       <article class="card kind-about">
         <h3>One paragraph that turns hearts</h3>
-        <p>If you have ever been overlooked, you already know why this matters. Your support keeps one life on the page so another life can feel seen. You help finish the memoir and preserve the poetry. You bring access editions to readers with low vision and you place copies where care is needed most. This is love made practical. This is our Orchard.</p>
+        <p>If you have ever been overlooked, you already know why this matters. Your support keeps one life on the page so another life can feel seen. You help finish the memoir <strong>A Life Experience</strong> and preserve the poetry. You bring access editions to readers with low vision and you place copies where care is needed most. This is love made practical. This is our Orchard.</p>
+      </article>
+
+      <!-- FAQ for rich results -->
+      <article class="card kind-about" itemscope itemtype="https://schema.org/FAQPage">
+        <h3>Questions</h3>
+        <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary itemprop="name">Can I cancel monthly support anytime?</summary>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="sub" itemprop="text">Yes. Cancel anytime. Receipts are provided and recognition can be public, initials, or anonymous.</p>
+          </div>
+        </details>
+        <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary itemprop="name">What does my support make possible?</summary>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="sub" itemprop="text">Editing and design, access editions for low vision readers, community copies, and the time and stability to finish work I can stand behind.</p>
+          </div>
+        </details>
       </article>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" role="presentation"></div>
 
     <!-- Social -->
     <section id="socials" class="cluster" aria-labelledby="socials-title">
@@ -251,7 +323,7 @@
       </article>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" role="presentation"></div>
 
     <!-- Websites -->
     <section id="sites" class="cluster" aria-labelledby="sites-title">
@@ -275,9 +347,9 @@
 
     <footer>
       <div class="note">Because of you, this is not just my story. It is ours.</div>
-      <div class="cta-row" style="justify-content:center;margin-top:10px">
+      <nav class="cta-row" style="justify-content:center;margin-top:10px" aria-label="Footer actions">
         <a id="copyEmail" class="btn btn-secondary" href="#" role="button" aria-label="Copy my email">Copy my email</a>
-      </div>
+      </nav>
       <div class="links" style="margin-top:10px">
         <a href="mailto:shaunapple@gmail.com" data-src="footer_email" rel="noopener">Email</a>
         <a href="#top" aria-label="Back to top" data-src="footer_top">Back to top</a>
@@ -285,6 +357,68 @@
       <div class="copyright">© <span id="year"></span> Shaun J Apple · Orchard of Life Experience</div>
     </footer>
   </main>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://lifeexperience.github.io/",
+        "name": "Shaun J Apple — Life Experience",
+        "publisher": {"@type":"Person","name":"Shaun J Apple","url":"https://lifeexperience.github.io/"}
+      },
+      {
+        "@type": "Person",
+        "name": "Shaun J Apple",
+        "url": "https://lifeexperience.github.io/",
+        "sameAs": [
+          "https://x.com/ShaunApple",
+          "https://www.instagram.com/withinmylove/",
+          "https://www.youtube.com/@ShaunApple",
+          "https://www.tiktok.com/@PublishPoems",
+          "https://www.twitch.tv/lifesubstance",
+          "https://www.linkedin.com/in/lifeexperience/",
+          "https://medium.com/@shaunapple",
+          "https://substack.com/@shaunapple"
+        ]
+      },
+      {
+        "@type": "Book",
+        "name": "A Double Star System",
+        "author": {"@type":"Person","name":"Shaun J Apple"},
+        "inLanguage": "en",
+        "creativeWorkStatus": "https://schema.org/InProgress",
+        "description": "A companion collection that holds two truths at once. Complete and preparing release."
+      },
+      {
+        "@type": "Book",
+        "name": "SWAY",
+        "author": {"@type":"Person","name":"Shaun J Apple"},
+        "inLanguage": "en",
+        "creativeWorkStatus": "https://schema.org/InProgress",
+        "description": "Epic poetry about feeling and philosophy. Complete and preparing release."
+      },
+      {
+        "@type": "Book",
+        "name": "A Life Experience",
+        "alternateName": "A Life Experience — The Shaun Apple Story",
+        "author": {"@type":"Person","name":"Shaun J Apple"},
+        "inLanguage": "en",
+        "creativeWorkStatus": "https://schema.org/InProgress",
+        "description": "A memoir of survival and love across borders. Complete and preparing release in print, ebook, and access editions."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"Can I cancel monthly support anytime?","acceptedAnswer":{"@type":"Answer","text":"Yes. Cancel anytime. Receipts are provided and recognition can be public, initials, or anonymous."}},
+          {"@type":"Question","name":"What does my support make possible?","acceptedAnswer":{"@type":"Answer","text":"Editing and design, access editions for low vision readers, community copies, and the time and stability to finish work I can stand behind."}}
+        ]
+      }
+    ]
+  }
+  </script>
 
   <script>
     // Year stamp
@@ -324,7 +458,7 @@
       function computeSrc(el){ if(el.dataset && el.dataset.src) return el.dataset.src; const sec = sectionIdFor(el); const label = slugify(el.getAttribute('aria-label') || el.textContent); return 'hub_'+sec+'_'+label; }
       document.addEventListener('click', function(ev){
         const a = ev.target.closest('a[href^="http"]');
-        if(!a) return;
+        if(!a || a.classList.contains('disabled') || a.getAttribute('aria-disabled') === 'true') return;
         try{
           const url = new URL(a.href, location.href);
           if(!url.searchParams.has('src')){ url.searchParams.set('src', computeSrc(a)); a.href = url.toString(); }
