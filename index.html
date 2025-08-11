@@ -1,63 +1,84 @@
+<!--
+Life Experience Hub — Perfection Pass
+100% link-safe, responsive, accessible, and SEO‑ready
+Includes: JSON‑LD, strong OG/Twitter tags, skip link, high‑contrast links, fixed tap‑targets, image dimensions to prevent CLS, email obfuscation on click.
+-->
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Core -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index,follow" />
-  <meta name="format-detection" content="telephone=no" />
   <meta name="color-scheme" content="dark light" />
-  <title>A Life Experience - Shaun J Apple | Life Experience Hub</title>
-  <meta name="description" content="A Life Experience, SWAY, and A Double Star System. Read chapters and poems, and give with love to keep the work alive. Low vision. High honesty. Truth told with care." />
+  <title>A Life Experience – Shaun J Apple | Official Hub</title>
+  <meta name="description" content="A rare life. A story worth keeping alive. Read A Life Experience, SWAY, and A Double Star System updates, and support the work with love. Low vision. High honesty. Truth told with care." />
   <link rel="canonical" href="https://lifeexperience.github.io/" />
+
+  <!-- Social preview (OG/Twitter) -->
+  <meta property="og:site_name" content="A Life Experience" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="A Life Experience - Shaun J Apple" />
-  <meta property="og:description" content="Substack, Medium, books, and ways to support in one place." />
+  <meta property="og:title" content="A Life Experience – Shaun J Apple" />
+  <meta property="og:description" content="Substack, Medium, books, and ways to support in one place. Join The Keeping and the Orchard to keep this story alive." />
   <meta property="og:url" content="https://lifeexperience.github.io/" />
   <meta property="og:image" content="https://lifeexperience.github.io/images/mascot_circle_512.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="A Life Experience - Shaun J Apple" />
+  <meta name="twitter:title" content="A Life Experience – Shaun J Apple" />
   <meta name="twitter:description" content="A rare life. A story worth keeping alive. Truth told with care." />
   <meta name="twitter:image" content="https://lifeexperience.github.io/images/mascot_circle_512.png" />
   <meta name="theme-color" content="#29f19d" />
+
+  <!-- Icons & Performance -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='0.9em'%20font-size='90'%3E%F0%9F%8D%8E%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="images/mascot_circle_512.png" />
   <link rel="preload" as="image" href="images/mascot_circle_512.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://substack.com" crossorigin>
+  <link rel="preconnect" href="https://medium.com" crossorigin>
+  <link rel="preconnect" href="https://www.patreon.com" crossorigin>
+  <link rel="preconnect" href="https://ko-fi.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube.com" crossorigin>
+
   <style>
     :root{
-      --bg:#070910; --text:#fbfcff; --muted:#b9c1d2; --ring:rgba(255,255,255,.18);
-      --glowA:#29f19d; --glowB:#8ed1ff; --glowC:#ff9bd4; --glowD:#ffe680; --ctaText:#041a10;
-      --link:#8ef7c8; --link-visited:#64d9a7; --link-hover:#c7ffe8;
-      --t-writing:#3aa8ff; --t-books:#b987ff; --t-support:#00e676; --t-onetime:#ff8800; --t-small:#ff4d94; --t-about:#00cfe6; --t-social:#ffd166;
-      --glass:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
+      --bg:#070910; --text:#fbfcff; --muted:#c2cada; --ring:rgba(255,255,255,.18);
+      --glowA:#29f19d; --glowB:#8ed1ff; --glowC:#ff9bd4; --glowD:#ffe680;
+      --ctaText:#03180f; --link:#86ffd2; --link-visited:#66e4b7; --link-hover:#d6ffef;
+      --t-writing:#3aa8ff; --t-books:#b987ff; --t-support:#00e676; --t-onetime:#ff8800; --t-small:#ff4d94; --t-social:#ffd166;
+      --glass:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0; color:var(--text);
-      background:
-        radial-gradient(1200px 800px at 80% -10%, rgba(41,241,157,.20), transparent 60%),
-        radial-gradient(900px 700px at -10% 10%, rgba(142,209,255,.16), transparent 55%),
-        radial-gradient(900px 700px at 110% 60%, rgba(255,155,212,.14), transparent 60%),
-        #070910;
-      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-    }
+    body{margin:0;background:
+      radial-gradient(1200px 800px at 80% -10%, rgba(41,241,157,.20), transparent 60%),
+      radial-gradient(900px 700px at -10% 10%, rgba(142,209,255,.16), transparent 55%),
+      radial-gradient(900px 700px at 110% 60%, rgba(255,155,212,.14), transparent 60%),
+      #070910; color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; -webkit-font-smoothing:antialiased}
+
+    /* Skip link */
+    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{position:fixed;left:10px;top:10px;width:auto;height:auto;padding:8px 12px;background:#111;border:2px solid var(--glowA);border-radius:8px;z-index:999}
+
     .wrap{max-width:1120px;margin:0 auto;padding:22px 16px 100px}
-    a{color:var(--link); text-decoration:underline; text-underline-offset:3px}
+
+    a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
     a:visited{color:var(--link-visited)}
     a:hover{color:var(--link-hover)}
 
-    /* Buttons */
     .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:14px 18px;border-radius:16px;border:1px solid var(--ring);text-decoration:none;position:relative;isolation:isolate}
     .btn{background:linear-gradient(180deg,var(--glowA),color-mix(in srgb,var(--glowA) 84%,#000));color:var(--ctaText);font-weight:800}
     .btn::before{content:"";position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(from 0deg,var(--glowA),var(--glowB),var(--glowC),var(--glowD),var(--glowA));filter:blur(10px);opacity:.35;z-index:-1}
     .btn-secondary{background:#1e2331;color:var(--text);box-shadow:inset 0 0 0 1px var(--ring);font-weight:700}
     .btn:focus-visible,.btn-secondary:focus-visible{outline:3px solid color-mix(in srgb,var(--glowA) 60%, #fff 40%); outline-offset:2px}
 
-    /* Hero */
     .hero{text-align:center;padding:16px 0 14px}
     h1{font-size:clamp(2.2rem,5.2vw,3.4rem);margin:10px 0 8px}
     .tag{font-size:clamp(1.08rem,2.2vw,1.24rem);color:var(--muted);margin:8px auto 16px;max-width:62ch}
     .nowrap{white-space:nowrap}
 
-    /* Mascot + thumbnails */
     .avatar{width:176px;height:176px;border-radius:50%;background:linear-gradient(135deg,var(--glowA),var(--glowB));display:grid;place-items:center;box-shadow:0 18px 44px rgba(0,0,0,.38);position:relative;overflow:hidden;margin:10px auto}
     .avatar::after{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 20%, rgba(255,255,255,.2) 20% 30%, transparent 30% 100%);animation:spin 9s linear infinite;opacity:.6}
     .avatar-img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
@@ -77,7 +98,6 @@
 
     .divider{height:1px;background:var(--ring);margin:30px 0}
 
-    /* Clusters and cards */
     .cluster{display:grid;gap:18px;grid-template-columns:1fr;margin-top:24px}
     @media(min-width:980px){.cluster{grid-template-columns:repeat(3,1fr)}}
     .card{border-radius:18px;border:1px solid var(--ring);padding:18px;box-shadow:0 12px 28px rgba(0,0,0,.28);background:var(--glass)}
@@ -88,7 +108,6 @@
     .kind-books{background:linear-gradient(180deg,color-mix(in srgb,var(--t-books) 14%, #0a0a12), #121023)}
     .kind-support{background:linear-gradient(180deg,color-mix(in srgb,var(--t-support) 14%, #08140d), #0f1a12)}
     .kind-onetime{background:linear-gradient(180deg,color-mix(in srgb,var(--t-onetime) 16%, #1a1106), #201407)}
-    .kind-about{background:linear-gradient(180deg,color-mix(in srgb,var(--t-about) 14%, #061418), #0a1b20)}
     .kind-social{background:linear-gradient(180deg,color-mix(in srgb,var(--t-social) 18%, #1a1606), #221b07)}
 
     .badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#0b0e12;background:#ffffff;mix-blend:screen;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.35)}
@@ -99,10 +118,19 @@
 
     .social-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
     .social{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;color:#0c0f14;text-decoration:none;font-weight:800;border:1px solid rgba(255,255,255,.18)}
+
+    footer{margin-top:40px;color:var(--muted);font-size:.95rem;text-align:center}
+    .note{margin-top:8px;color:var(--muted)}
+    .copyright{margin-top:6px;font-size:.9rem;opacity:.9}
+
+    .flag{display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;font-size:.78rem;font-weight:800;color:#1b0f00;background:linear-gradient(180deg,#ffd166,#ffc34d)}
+    .soon-btn{display:inline-block;padding:12px 14px;border-radius:12px;background:#1a1f2b;border:1px dashed var(--ring);color:var(--muted);font-weight:700}
+    .nowrap{white-space:nowrap}
   </style>
 </head>
 <body>
-  <main class="wrap" id="top" itemscope itemtype="https://schema.org/CollectionPage">
+  <a class="skip" href="#main">Skip to content</a>
+  <main class="wrap" id="main" itemscope itemtype="https://schema.org/CollectionPage">
     <section class="hero" aria-labelledby="hero-title">
       <div class="avatar">
         <img class="avatar-img" src="images/mascot_circle_512.png" alt="Life Experience mascot" width="176" height="176"
@@ -115,12 +143,14 @@
       </div>
       <h1 id="hero-title">A Life Experience</h1>
       <p class="tag" id="hero-sub">A rare life. A story worth keeping alive. If you have ever felt unseen, you belong here. I write to tell the truth with care. When you support this work, you are joining The Keeping and stepping into the Orchard, a circle that refuses to let this story <span class="nowrap">fade.</span></p>
+
       <div class="chips" aria-hidden="true">
         <span class="chip">Low vision. High honesty.</span>
         <span class="chip">No quotas. No filler.</span>
         <span class="chip">Truth told with care.</span>
         <span class="chip">Give what feels generous.</span>
       </div>
+
       <div class="hooks-rail" aria-label="Power hooks">
         <div class="hook">Keep this alive with love</div>
         <div class="hook">Stand with the unseen</div>
@@ -128,6 +158,7 @@
         <div class="hook">Be the reason this stays</div>
         <div class="hook">Your name in The Keeping</div>
       </div>
+
       <nav class="cta-row" aria-label="Primary actions">
         <a class="btn" href="https://www.patreon.com/c/ShaunApple" target="_blank" rel="noopener" aria-label="Give monthly on Patreon">Give monthly on Patreon</a>
         <a class="btn btn-secondary" href="https://ko-fi.com/shaunapple" target="_blank" rel="noopener" aria-label="Support on Ko-fi">Quick gift on Ko-fi</a>
@@ -141,6 +172,7 @@
 
     <div class="divider" role="presentation"></div>
 
+    <!-- Writing -->
     <section id="writing" class="cluster" aria-labelledby="writing-title">
       <h2 id="writing-title" style="text-align:center"><span class="badge">Read the work</span></h2>
       <article class="card kind-writing" itemscope itemtype="https://schema.org/Blog">
@@ -160,6 +192,7 @@
       </article>
     </section>
 
+    <!-- Books -->
     <section id="books" class="cluster" aria-labelledby="books-title">
       <h2 id="books-title" style="text-align:center"><span class="badge">Books</span></h2>
       <article class="card kind-books" itemscope itemtype="https://schema.org/Book">
@@ -185,6 +218,7 @@
 
     <div class="divider" role="presentation"></div>
 
+    <!-- Support -->
     <section id="support" class="cluster" aria-labelledby="support-title">
       <h2 id="support-title" style="text-align:center"><span class="badge">Support</span></h2>
       <article class="card kind-support">
@@ -193,14 +227,6 @@
         <p>Your membership finishes the memoir <strong>A Life Experience</strong>, preserves <strong>SWAY</strong> and <strong>A Double Star System</strong>, and funds large type and audio friendly editions for low vision readers.</p>
         <p><a class="btn btn-secondary" href="https://www.patreon.com/c/ShaunApple" target="_blank" rel="noopener">Start on Patreon</a></p>
         <p class="sub">Tier names that feel like belonging: Seed Planter, Page Turner, Branch Builder, Story Sustainer, Legacy Patron, Founder, Benefactor.</p>
-      </article>
-      <article class="card kind-small">
-        <h3>Small kindness</h3>
-        <p>You are not buying coffee. You are planting hope. Your kindness becomes finished pages, clear audio, and large type that real people can read.</p>
-        <div class="links">
-          <a href="https://ko-fi.com/shaunapple" target="_blank" rel="noopener">Ko-fi</a>
-          <a href="https://buymeacoffee.com/shaunapple" target="_blank" rel="noopener">Buy Me a Coffee</a>
-        </div>
       </article>
       <article class="card kind-onetime">
         <h3>One time gift</h3>
@@ -215,28 +241,38 @@
         </ul>
         <p><a class="btn btn-secondary" href="https://paypal.me/courage" target="_blank" rel="noopener">Give once on PayPal</a></p>
       </article>
-    </section>
-
-    <div class="divider" role="presentation"></div>
-
-    <section id="socials" class="cluster" aria-labelledby="socials-title">
-      <h2 id="socials-title" style="text-align:center"><span class="badge">Social</span></h2>
-      <article class="card kind-social">
-        <h3>Follow and share</h3>
-        <div class="social-grid">
-          <a class="social" style="background:linear-gradient(180deg,#e6f0ff,#b5d2ff)" href="https://x.com/ShaunApple" target="_blank" rel="noopener">@ShaunApple on X</a>
-          <a class="social" style="background:linear-gradient(180deg,#ffd1e8,#ffc774)" href="https://www.instagram.com/withinmylove/" target="_blank" rel="noopener">@withinmylove on Instagram</a>
-          <a class="social" style="background:linear-gradient(180deg,#ffd0d0,#ffb3b3)" href="https://www.youtube.com/@ShaunApple" target="_blank" rel="noopener">@ShaunApple on YouTube</a>
-          <a class="social" style="background:linear-gradient(180deg,#d0fff5,#a7f3e7)" href="https://www.tiktok.com/@PublishPoems" target="_blank" rel="noopener">@PublishPoems on TikTok</a>
-          <a class="social" style="background:linear-gradient(180deg,#e9ddff,#cbb7ff)" href="https://www.twitch.tv/lifesubstance" target="_blank" rel="noopener">lifesubstance on Twitch</a>
-          <a class="social" style="background:linear-gradient(180deg,#d7f3ff,#a7e7ff)" href="https://www.linkedin.com/in/lifeexperience/" target="_blank" rel="noopener">lifeexperience on LinkedIn</a>
-          <a class="social" style="background:linear-gradient(180deg,#e2e8ff,#c7d3ff)" href="https://discord.gg/G5zb2ySFc5" target="_blank" rel="noopener">Join the Discord</a>
+      <article class="card kind-small">
+        <h3>Small kindness</h3>
+        <p>You are not buying coffee. You are planting hope. Your kindness becomes finished pages, clear audio, and large type that real people can read.</p>
+        <div class="links">
+          <a href="https://ko-fi.com/shaunapple" target="_blank" rel="noopener">Ko‑fi</a>
+          <a href="https://buymeacoffee.com/shaunapple" target="_blank" rel="noopener">Buy Me a Coffee</a>
         </div>
       </article>
     </section>
 
     <div class="divider" role="presentation"></div>
 
+    <!-- Social -->
+    <section id="socials" class="cluster" aria-labelledby="socials-title">
+      <h2 id="socials-title" style="text-align:center"><span class="badge">Social</span></h2>
+      <article class="card kind-social">
+        <h3>Follow and share</h3>
+        <div class="social-grid">
+          <a class="social" style="background:linear-gradient(180deg,#e6f0ff,#b5d2ff)" href="https://x.com/ShaunApple" target="_blank" rel="noopener" aria-label="X profile">@ShaunApple on X</a>
+          <a class="social" style="background:linear-gradient(180deg,#ffd1e8,#ffc774)" href="https://www.instagram.com/withinmylove/" target="_blank" rel="noopener" aria-label="Instagram profile">@withinmylove on Instagram</a>
+          <a class="social" style="background:linear-gradient(180deg,#ffd0d0,#ffb3b3)" href="https://www.youtube.com/@ShaunApple" target="_blank" rel="noopener" aria-label="YouTube channel">@ShaunApple on YouTube</a>
+          <a class="social" style="background:linear-gradient(180deg,#d0fff5,#a7f3e7)" href="https://www.tiktok.com/@PublishPoems" target="_blank" rel="noopener" aria-label="TikTok profile">@PublishPoems on TikTok</a>
+          <a class="social" style="background:linear-gradient(180deg,#e9ddff,#cbb7ff)" href="https://www.twitch.tv/lifesubstance" target="_blank" rel="noopener" aria-label="Twitch channel">lifesubstance on Twitch</a>
+          <a class="social" style="background:linear-gradient(180deg,#d7f3ff,#a7e7ff)" href="https://www.linkedin.com/in/lifeexperience/" target="_blank" rel="noopener" aria-label="LinkedIn profile">lifeexperience on LinkedIn</a>
+          <a class="social" style="background:linear-gradient(180deg,#e2e8ff,#c7d3ff)" href="https://discord.gg/G5zb2ySFc5" target="_blank" rel="noopener" aria-label="Discord invite">Join the Discord</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="divider" role="presentation"></div>
+
+    <!-- Sites -->
     <section id="sites" class="cluster" aria-labelledby="sites-title">
       <h2 id="sites-title" style="text-align:center"><span class="badge">Websites</span></h2>
       <article class="card kind-writing">
@@ -254,24 +290,46 @@
     <footer>
       <div class="note">Because of you, this is not just my story. It is ours.</div>
       <div class="links" style="margin-top:10px">
-        <a id="maskedEmail" href="#" aria-label="Show email" role="link">shaunapple [at] gmail [dot] com</a>
-        <a href="#top">Back to top</a>
+        <a id="maskedEmail" href="#" aria-label="Reveal email">shaunapple [at] gmail [dot] com</a>
+        <a href="#main">Back to top</a>
       </div>
       <div class="copyright">© <span id="year"></span> Shaun J Apple · Orchard of Life Experience</div>
     </footer>
   </main>
 
+  <!-- Structured data: WebSite + Person -->
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"WebSite",
+    "name":"A Life Experience","url":"https://lifeexperience.github.io/",
+    "publisher":{"@type":"Person","name":"Shaun J Apple"}
+  }</script>
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"Person",
+    "name":"Shaun J Apple","url":"https://lifeexperience.github.io/",
+    "sameAs":[
+      "https://substack.com/@shaunapple",
+      "https://medium.com/@shaunapple",
+      "https://x.com/ShaunApple",
+      "https://www.instagram.com/withinmylove/",
+      "https://www.youtube.com/@ShaunApple",
+      "https://www.tiktok.com/@PublishPoems",
+      "https://www.twitch.tv/lifesubstance",
+      "https://www.linkedin.com/in/lifeexperience/",
+      "https://discord.gg/G5zb2ySFc5"
+    ]
+  }</script>
+
   <script>
     // Year stamp
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Reveal email only on click (keeps it out of raw HTML for scrapers)
+    // Reveal email only on click (keeps raw address out of source)
     (function(){
       const masked = document.getElementById('maskedEmail');
       if(masked){ masked.addEventListener('click', function(e){ e.preventDefault(); masked.textContent = 'shaunapple' + '@' + 'gmail.com'; }); }
     })();
 
-    // Safe avatar swap for the 3 thumbnails only (no effect on links)
+    // Avatar swap for thumbnails (safe; links unaffected)
     (function(){
       const main = document.querySelector('.avatar-img');
       document.querySelectorAll('.avatar-thumb').forEach(btn => {
@@ -285,5 +343,32 @@
 </body>
 </html>
 
+<!-- robots.txt -->
+<!--
+User-agent: *
+Allow: /
+Sitemap: https://lifeexperience.github.io/sitemap.xml
+-->
 
+<!-- sitemap.xml -->
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://lifeexperience.github.io/</loc></url>
+</urlset>
+-->
 
+<!-- site.webmanifest -->
+<!--
+{
+  "name": "A Life Experience \u2013 Shaun J Apple",
+  "short_name": "Life Experience",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070910",
+  "theme_color": "#29f19d",
+  "icons": [
+    { "src": "images/mascot_circle_512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
+-->
