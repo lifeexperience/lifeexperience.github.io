@@ -7,22 +7,22 @@
   <meta name="robots" content="index,follow" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="color-scheme" content="dark light" />
-  <title>Shaun J Apple — Life Experience | A rare life. A story worth keeping alive.</title>
-  <meta name="description" content="Read chapters and poems, see the books, and give with love to keep A Life Experience, SWAY, and A Double Star System alive. Low vision. High honesty. Truth told with care." />
+  <title>A Life Experience — Shaun J Apple | Life Experience Hub</title>
+  <meta name="description" content="A Life Experience, SWAY, and A Double Star System. Read chapters and poems, and give with love to keep the work alive. Low vision. High honesty. Truth told with care." />
 
   <!-- Canonical & Preview -->
   <link rel="canonical" href="https://lifeexperience.github.io/" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Shaun J Apple — Life Experience" />
+  <meta property="og:title" content="A Life Experience — Shaun J Apple" />
   <meta property="og:description" content="Substack, Medium, books, and ways to support in one place. Join The Keeping and the Orchard to keep this story alive." />
   <meta property="og:url" content="https://lifeexperience.github.io/" />
   <meta property="og:image" content="https://lifeexperience.github.io/images/mascot_circle_512.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Shaun J Apple — Life Experience" />
+  <meta name="twitter:title" content="A Life Experience — Shaun J Apple" />
   <meta name="twitter:description" content="A rare life. A story worth keeping alive. Truth told with care." />
   <meta name="twitter:image" content="https://lifeexperience.github.io/images/mascot_circle_512.png" />
-  <meta name="theme-color" content="#27d17a" />
+  <meta name="theme-color" content="#29f19d" />
 
   <!-- Icons -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='0.9em'%20font-size='90'%3E%F0%9F%8D%8E%3C/text%3E%3C/svg%3E">
@@ -30,77 +30,101 @@
 
   <!-- Performance hints -->
   <link rel="preload" as="image" href="images/mascot_circle_512.png" />
-  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
 
   <style>
     :root{
-      --bg:#0f1116; --text:#f7f8fc; --muted:#b8bdc9; --ring:rgba(255,255,255,.14);
-      --brand:#27d17a; --brand2:#9bd7ff; --ctaText:#062215;
-      --link:#7bf2b7; --link-visited:#59c893; --link-hover:#b2ffd6;
-      /* Section palette */
-      --c-writing2:#a6c8ff; --c-books2:#e7c6ff; --c-support2:#b9f6ca; --c-onetime2:#ffd9a0; --c-small2:#ffb3c6; --c-about2:#b2ebf2; --c-social2:#ffe6a6;
-      --glass:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      --bg:#070910; --text:#fbfcff; --muted:#b9c1d2; --ring:rgba(255,255,255,.18);
+      --glowA:#29f19d; --glowB:#8ed1ff; --glowC:#ff9bd4; --glowD:#ffe680;
+      --ctaText:#041a10;
+      --link:#8ef7c8; --link-visited:#64d9a7; --link-hover:#c7ffe8;
+      /* Section tints */
+      --t-writing:#3aa8ff; --t-books:#b987ff; --t-support:#00e676; --t-onetime:#ff8800; --t-small:#ff4d94; --t-about:#00cfe6; --t-social:#ffd166;
+      --glass:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; background:radial-gradient(1100px 900px at 75% -10%,#1c2030 0%,var(--bg) 60%);
-      color:var(--text); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; -webkit-font-smoothing:antialiased;
+      margin:0; color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 80% -10%, rgba(41,241,157,.20), transparent 60%),
+        radial-gradient(900px 700px at -10% 10%, rgba(142,209,255,.16), transparent 55%),
+        radial-gradient(900px 700px at 110% 60%, rgba(255,155,212,.14), transparent 60%),
+        #070910;
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; -webkit-font-smoothing:antialiased;
     }
-    .wrap{max-width:1120px;margin:0 auto;padding:22px 16px 96px}
+    .wrap{max-width:1120px;margin:0 auto;padding:22px 16px 100px}
 
     a{color:var(--link); text-decoration:underline; text-underline-offset:3px}
     a:visited{color:var(--link-visited)}
     a:hover{color:var(--link-hover)}
 
-    .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:14px 18px;border-radius:14px;border:1px solid var(--ring);text-decoration:none}
-    .btn{background:linear-gradient(180deg,var(--brand),color-mix(in srgb,var(--brand) 84%,#000));color:var(--ctaText);font-weight:750}
-    .btn-secondary{background:#232834;color:var(--text);box-shadow:inset 0 0 0 1px var(--ring);font-weight:650}
-    .btn:focus-visible,.btn-secondary:focus-visible{outline:3px solid color-mix(in srgb,var(--brand) 60%, #fff 40%); outline-offset:2px}
+    .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:14px 18px;border-radius:16px;border:1px solid var(--ring);text-decoration:none;position:relative;isolation:isolate}
+    .btn{background:linear-gradient(180deg,var(--glowA),color-mix(in srgb,var(--glowA) 84%,#000));color:var(--ctaText);font-weight:800}
+    .btn::before{content:"";position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(from 0deg,var(--glowA),var(--glowB),var(--glowC),var(--glowD),var(--glowA));filter:blur(10px);opacity:.35;z-index:-1}
+    .btn-secondary{background:#1e2331;color:var(--text);box-shadow:inset 0 0 0 1px var(--ring);font-weight:700}
+    .btn:focus-visible,.btn-secondary:focus-visible{outline:3px solid color-mix(in srgb,var(--glowA) 60%, #fff 40%); outline-offset:2px}
 
     header.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
     .eyebrow{color:var(--muted);font-size:.95rem}
 
-    .hero{position:relative;text-align:center;padding:14px 0 12px}
-    .hero::before,.hero::after{content:"";position:absolute;inset:auto;pointer-events:none;filter:blur(40px);opacity:.6}
-    .hero::before{top:-30px;left:5%;width:220px;height:220px;background:radial-gradient(closest-side,#27d17a44,transparent)}
-    .hero::after{top:-60px;right:6%;width:300px;height:300px;background:radial-gradient(closest-side,#9bd7ff40,transparent)}
+    .hero{position:relative;text-align:center;padding:16px 0 14px}
+    .hero::before,.hero::after{content:"";position:absolute;inset:auto;pointer-events:none;filter:blur(44px);opacity:.7}
+    .hero::before{top:-30px;left:8%;width:240px;height:240px;background:radial-gradient(closest-side,#29f19d44,transparent)}
+    .hero::after{top:-60px;right:6%;width:320px;height:320px;background:radial-gradient(closest-side,#8ed1ff40,transparent)}
 
-    h1{font-size:clamp(2.1rem,5vw,3.2rem);margin:10px 0 8px}
-    .tag{font-size:clamp(1.06rem,2.2vw,1.22rem);color:var(--muted);margin:8px auto 16px;max-width:58ch}
+    h1{font-size:clamp(2.2rem,5.2vw,3.4rem);margin:10px 0 8px}
+    .tag{font-size:clamp(1.08rem,2.2vw,1.24rem);color:var(--muted);margin:8px auto 16px;max-width:62ch}
+    .nowrap{white-space:nowrap}
 
-    .chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:8px auto 8px}
-    .chip{font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;background:#22293a;border:1px solid var(--ring);color:var(--muted)}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:10px auto}
+    .chip{font-size:12px;font-weight:800;padding:7px 11px;border-radius:999px;background:#242a3b;border:1px solid var(--ring);color:var(--muted)}
 
-    .avatar{width:132px;height:132px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:#fff;font-weight:800;letter-spacing:.5px;box-shadow:0 10px 30px rgba(0,0,0,.35);position:relative;overflow:hidden;margin:10px auto}
-    .avatar-img{width:100%;height:100%;object-fit:cover;display:block}
+    .hooks-rail{display:grid;grid-auto-flow:column;gap:10px;overflow:auto;padding:6px;margin:8px 0 4px;scroll-snap-type:x mandatory}
+    .hook{scroll-snap-align:start;white-space:nowrap;font-weight:800;font-size:.93rem;padding:10px 14px;border-radius:999px;border:1px solid var(--ring);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02))}
+    .hook.green{color:#0f261b;background:linear-gradient(180deg,#29f19d,#0acb74)}
+    .hook.pink{color:#2c0f1f;background:linear-gradient(180deg,#ff9bd4,#ff6bbd)}
+    .hook.blue{color:#0b1b2a;background:linear-gradient(180deg,#8ed1ff,#59bbff)}
+    .hook.gold{color:#281e03;background:linear-gradient(180deg,#ffe680,#ffd24b)}
+
+    /* Mascot pop */
+    .avatar{width:168px;height:168px;border-radius:50%;background:linear-gradient(135deg,var(--glowA),var(--glowB));display:grid;place-items:center;color:#fff;font-weight:800;letter-spacing:.5px;box-shadow:0 18px 44px rgba(0,0,0,.38);position:relative;overflow:hidden;margin:10px auto}
+    .avatar::after{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 20%, rgba(255,255,255,.2) 20% 30%, transparent 30% 100%);animation:spin 9s linear infinite;opacity:.6}
+    .avatar::before{content:"";position:absolute;inset:-3px;border-radius:50%;background:radial-gradient(closest-side,transparent 66%, rgba(255,255,255,.22) 67% 70%, transparent 71%);}
+    .avatar-img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%;}
+    @media (prefers-reduced-motion: reduce){ .avatar::after{animation:none} }
+    @keyframes spin{to{transform:rotate(1turn)}}
+
     .avatar-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-    .avatar-thumb{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid color-mix(in srgb,var(--brand) 35%, #181d29);cursor:pointer;transition:transform .15s ease,border-color .15s ease}
+    .avatar-thumb{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid color-mix(in srgb,var(--glowA) 35%, #181d29);cursor:pointer;transition:transform .15s ease,border-color .15s ease}
     .avatar-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .avatar-thumb:hover{transform:translateY(-2px);border-color:var(--brand)}
+    .avatar-thumb:hover{transform:translateY(-2px);border-color:var(--glowA)}
 
-    .cta-row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));max-width:1000px;margin:18px auto 8px}
+    .cta-row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));max-width:1000px;margin:18px auto 10px}
+
+    .impact{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:8px}
+    .impact .tile{padding:12px 14px;border-radius:14px;border:1px solid var(--ring);background:var(--glass);text-align:center}
+    .impact .tile strong{display:block;font-size:1.05rem}
+    .impact .tile span{color:var(--muted);font-size:.95rem}
 
     .divider{height:1px;background:var(--ring);margin:30px 0}
 
     /* Cards */
     .cluster{display:grid;gap:18px;grid-template-columns:1fr;margin-top:24px}
     @media(min-width:980px){.cluster{grid-template-columns:repeat(3,1fr)}}
-    .card{border-radius:16px;border:1px solid var(--ring);padding:18px;box-shadow:0 12px 28px rgba(0,0,0,.28);background:var(--glass)}
+    .card{border-radius:18px;border:1px solid var(--ring);padding:18px;box-shadow:0 12px 28px rgba(0,0,0,.28);background:var(--glass);position:relative;overflow:hidden}
     .card h2,.card h3{margin:0 0 6px}
-    .card h3{font-size:1.14rem}
+    .card h3{font-size:1.16rem}
     .card p{margin:4px 0;color:var(--text)}
     .sub{color:var(--muted)}
 
     /* Color kinds */
-    .kind-writing{background:linear-gradient(180deg,color-mix(in srgb,var(--c-writing2) 12%, #0a0f18), #0d1524)}
-    .kind-books{background:linear-gradient(180deg,color-mix(in srgb,var(--c-books2) 12%, #0a0a12), #121023)}
-    .kind-support{background:linear-gradient(180deg,color-mix(in srgb,var(--c-support2) 12%, #08140d), #0f1a12)}
-    .kind-onetime{background:linear-gradient(180deg,color-mix(in srgb,var(--c-onetime2) 14%, #1a1106), #201407)}
-    .kind-small{background:linear-gradient(180deg,color-mix(in srgb,var(--c-small2) 14%, #1a0a12), #200a14)}
-    .kind-about{background:linear-gradient(180deg,color-mix(in srgb,var(--c-about2) 12%, #061418), #0a1b20)}
-    .kind-social{background:linear-gradient(180deg,color-mix(in srgb,var(--c-social2) 16%, #1a1606), #221b07)}
+    .kind-writing{background:linear-gradient(180deg,color-mix(in srgb,var(--t-writing) 14%, #0a0f18), #0d1524)}
+    .kind-books{background:linear-gradient(180deg,color-mix(in srgb,var(--t-books) 14%, #0a0a12), #121023)}
+    .kind-support{background:linear-gradient(180deg,color-mix(in srgb,var(--t-support) 14%, #08140d), #0f1a12)}
+    .kind-onetime{background:linear-gradient(180deg,color-mix(in srgb,var(--t-onetime) 16%, #1a1106), #201407)}
+    .kind-small{background:linear-gradient(180deg,color-mix(in srgb,var(--t-small) 16%, #1a0a12), #200a14)}
+    .kind-about{background:linear-gradient(180deg,color-mix(in srgb,var(--t-about) 14%, #061418), #0a1b20)}
+    .kind-social{background:linear-gradient(180deg,color-mix(in srgb,var(--t-social) 18%, #1a1606), #221b07)}
 
     .badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#0b0e12;background:#ffffff;mix-blend:screen;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.35)}
 
@@ -108,10 +132,22 @@
     @media(min-width:760px){.links{grid-template-columns:repeat(3,1fr)}}
     .links a,.links button{padding:12px 14px;border-radius:12px;background:#1a1f2b;border:1px solid var(--ring);text-align:center;text-decoration:none}
 
-    /* Fancy card borders on hover for visual delight */
-    .card{position:relative}
+    /* Fancy card borders on hover for delight */
     .card::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(120deg,transparent,rgba(255,255,255,.18),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.0;transition:opacity .2s ease}
     .card:where(:hover,:focus-within)::after{opacity:1}
+
+    /* Social buttons big + branded */
+    .social-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+    .social{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;color:#0c0f14;text-decoration:none;font-weight:800;border:1px solid rgba(255,255,255,.18)}
+    .social .s-label{color:#081018}
+    .social svg{width:22px;height:22px}
+    .s-x{background:linear-gradient(180deg,#e6f0ff,#b5d2ff)}
+    .s-ig{background:linear-gradient(180deg,#ffd1e8,#ffc774)}
+    .s-yt{background:linear-gradient(180deg,#ffd0d0,#ffb3b3)}
+    .s-tt{background:linear-gradient(180deg,#d0fff5,#a7f3e7)}
+    .s-tw{background:linear-gradient(180deg,#e9ddff,#cbb7ff)}
+    .s-li{background:linear-gradient(180deg,#d7f3ff,#a9e7ff)}
+    .s-dc{background:linear-gradient(180deg,#e2e8ff,#c7d3ff)}
 
     /* Reduce motion for users who prefer it */
     @media (prefers-reduced-motion: reduce){
@@ -122,15 +158,10 @@
     footer{margin-top:40px;color:var(--muted);font-size:.95rem;text-align:center}
     .note{margin-top:8px;color:var(--muted)}
     .copyright{margin-top:6px;font-size:.9rem;opacity:.9}
+
+    /* Coming soon flag */
+    .flag{display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;font-size:.78rem;font-weight:800;color:#1b0f00;background:linear-gradient(180deg,#ffd166,#ffc34d)}
   </style>
-  <!-- Google Analytics (optional) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK3QD8JSWK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('js', new Date());
-    gtag('config', 'G-YK3QD8JSWK');
-  </script>
 </head>
 <body>
   <main class="wrap" id="top" itemscope itemtype="https://schema.org/CollectionPage">
@@ -140,7 +171,7 @@
 
     <section class="hero" aria-labelledby="hero-title">
       <div class="avatar">
-        <img class="avatar-img" src="images/mascot_circle_512.png" alt="Life Experience mascot" width="132" height="132" />
+        <img class="avatar-img" src="images/mascot_circle_512.png" alt="Life Experience mascot" width="168" height="168" />
       </div>
       <div class="avatar-bar" role="group" aria-label="Author portraits">
         <button class="avatar-thumb" data-src="images/staycurious_square_512.jpg" aria-label="Use Stay Curious portrait"><img src="images/staycurious_square_512.jpg" alt="Stay Curious portrait thumbnail" width="44" height="44" loading="lazy"></button>
@@ -148,14 +179,22 @@
         <button class="avatar-thumb" data-src="images/naradeer_square_512.jpg" aria-label="Use Nara Deer portrait"><img src="images/naradeer_square_512.jpg" alt="Nara Deer portrait thumbnail" width="44" height="44" loading="lazy"></button>
       </div>
 
-      <h1 id="hero-title">A rare life. A story worth keeping alive.</h1>
-      <p class="tag" id="hero-sub">If you have ever felt unseen, you belong here. I write to tell the truth with care. When you support this work, you are joining The Keeping and stepping into the Orchard, a circle that refuses to let this story fade.</p>
+      <h1 id="hero-title">A Life Experience</h1>
+      <p class="tag" id="hero-sub">A rare life. A story worth keeping alive. If you have ever felt unseen, you belong here. I write to tell the truth with care. When you support this work, you are joining The Keeping and stepping into the Orchard, a circle that refuses to let this story <span class="nowrap">fade.</span></p>
 
       <div class="chips" aria-hidden="true">
         <span class="chip">Low vision. High honesty.</span>
         <span class="chip">No quotas. No filler.</span>
         <span class="chip">Truth told with care.</span>
         <span class="chip">Give what feels generous.</span>
+      </div>
+
+      <div class="hooks-rail" aria-label="Power hooks">
+        <div class="hook green">Keep this alive with love</div>
+        <div class="hook pink">Stand with the unseen</div>
+        <div class="hook blue">Turn kindness into a page someone can hold</div>
+        <div class="hook gold">Be the reason this stays</div>
+        <div class="hook green">Your name in The Keeping</div>
       </div>
 
       <nav class="cta-row" aria-label="Primary actions">
@@ -167,7 +206,13 @@
         <a class="btn btn-secondary" href="https://medium.com/@shaunapple" data-src="hero_medium" rel="noopener" aria-label="Read on Medium">Read on Medium</a>
       </nav>
 
-      <p class="sub">Cancel anytime. Receipts provided. Recognition can be private or public. Accessibility comes first when feasible.</p>
+      <div class="impact" aria-label="Why your support matters">
+        <div class="tile"><strong>Love made practical</strong><span>Pages made with care, shared when ready</span></div>
+        <div class="tile"><strong>Access first</strong><span>Large type and audio friendly when feasible</span></div>
+        <div class="tile"><strong>Belonging</strong><span>Your name in The Keeping, private or public</span></div>
+      </div>
+
+      <p class="sub" style="margin-top:10px">Cancel anytime. Receipts provided.</p>
     </section>
 
     <div class="divider" role="presentation"></div>
@@ -192,39 +237,36 @@
       </article>
     </section>
 
-    <!-- Books (Requested order: A Double Star System, SWAY, A Life Experience) -->
+    <!-- Books (Order: A Double Star System, SWAY, A Life Experience) -->
     <section id="books" class="cluster" aria-labelledby="books-title">
       <h2 id="books-title" style="text-align:center"><span class="badge">Books</span></h2>
       <article class="card kind-books" itemscope itemtype="https://schema.org/Book">
-        <h3 itemprop="name">A Double Star System</h3>
+        <h3 itemprop="name">A Double Star System <span class="flag" aria-label="Coming soon">Coming soon</span></h3>
         <meta itemprop="inLanguage" content="en" />
         <p itemprop="description">A companion collection that holds two truths at once. Complete and preparing release.</p>
         <p class="sub">Buy links</p>
         <div class="links">
           <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Amazon coming soon</a>
-          <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Bookshop coming soon</a>
         </div>
       </article>
       <article class="card kind-books" itemscope itemtype="https://schema.org/Book">
-        <h3 itemprop="name">SWAY</h3>
+        <h3 itemprop="name">SWAY <span class="flag" aria-label="Coming soon">Coming soon</span></h3>
         <meta itemprop="inLanguage" content="en" />
         <p itemprop="description">Epic poetry about feeling and philosophy. Complete and preparing release.</p>
         <p class="sub">Buy links</p>
         <div class="links">
           <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Amazon coming soon</a>
-          <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Bookshop coming soon</a>
         </div>
       </article>
       <article class="card kind-books" itemscope itemtype="https://schema.org/Book">
-        <h3 itemprop="name">A Life Experience</h3>
-        <meta itemprop="alternateName" content="A Life Experience — The Shaun Apple Story" />
+        <h3 itemprop="name">A Life Experience <span class="flag" aria-label="Coming soon">Coming soon</span></h3>
+        <meta itemprop="alternateName" content="A Life Experience - The Shaun Apple Story" />
         <meta itemprop="inLanguage" content="en" />
         <p class="sub">The Shaun Apple Story</p>
         <p itemprop="description">A memoir of survival and love across borders. Complete and preparing release in print, ebook, and access editions.</p>
         <p class="sub">Buy links</p>
         <div class="links">
           <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Amazon coming soon</a>
-          <a class="btn btn-secondary" aria-disabled="true" title="Coming soon">Bookshop coming soon</a>
         </div>
       </article>
     </section>
@@ -311,14 +353,35 @@
       <h2 id="socials-title" style="text-align:center"><span class="badge">Social</span></h2>
       <article class="card kind-social">
         <h3>Follow and share</h3>
-        <div class="links">
-          <a href="https://x.com/ShaunApple" data-src="social_x" rel="noopener">X</a>
-          <a href="https://www.instagram.com/withinmylove/" data-src="social_instagram" rel="noopener">Instagram</a>
-          <a href="https://www.youtube.com/@ShaunApple" data-src="social_youtube" rel="noopener">YouTube</a>
-          <a href="https://www.tiktok.com/@PublishPoems" data-src="social_tiktok" rel="noopener">TikTok</a>
-          <a href="https://www.twitch.tv/lifesubstance" data-src="social_twitch" rel="noopener">Twitch</a>
-          <a href="https://www.linkedin.com/in/lifeexperience/" data-src="social_linkedin" rel="noopener">LinkedIn</a>
-          <a href="https://discord.gg/G5zb2ySFc5" data-src="social_discord" rel="noopener">Discord</a>
+        <div class="social-grid">
+          <a class="social s-x" href="https://x.com/ShaunApple" data-src="social_x" rel="noopener" aria-label="X profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h4.5l5.2 7.3L18 3h3.5l-7.3 9.7L22 21h-4.5l-5.6-7.9L8 21H4.5l7.3-9.7L3 3Z" fill="currentColor"/></svg>
+            <span class="s-label">@ShaunApple on X</span>
+          </a>
+          <a class="social s-ig" href="https://www.instagram.com/withinmylove/" data-src="social_instagram" rel="noopener" aria-label="Instagram profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" fill="currentColor"/></svg>
+            <span class="s-label">@withinmylove on Instagram</span>
+          </a>
+          <a class="social s-yt" href="https://www.youtube.com/@ShaunApple" data-src="social_youtube" rel="noopener" aria-label="YouTube channel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7Zm7 2.5v7l6-3.5-6-3.5Z" fill="currentColor"/></svg>
+            <span class="s-label">@ShaunApple on YouTube</span>
+          </a>
+          <a class="social s-tt" href="https://www.tiktok.com/@PublishPoems" data-src="social_tiktok" rel="noopener" aria-label="TikTok profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 1-6.9 14.8A6.5 6.5 0 0 0 12 20a6.5 6.5 0 0 0 6.5-6.5 6.8 6.8 0 0 0-6.5-6.5V3Z" fill="currentColor"/></svg>
+            <span class="s-label">@PublishPoems on TikTok</span>
+          </a>
+          <a class="social s-tw" href="https://www.twitch.tv/lifesubstance" data-src="social_twitch" rel="noopener" aria-label="Twitch channel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16v12l-4 4h-4l-2 2H8l-2-2H4V3Zm13 6h-2v4h2V9Zm-5 0H10v4h2V9Z" fill="currentColor"/></svg>
+            <span class="s-label">lifesubstance on Twitch</span>
+          </a>
+          <a class="social s-li" href="https://www.linkedin.com/in/lifeexperience/" data-src="social_linkedin" rel="noopener" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h5v5H4V4Zm0 7h5v9H4v-9Zm7 0h4v2.5c.6-1.1 1.8-2.5 4-2.5 3 0 5 2 5 6V20h-5v-4c0-2-1-3-2.5-3s-2.5 1-2.5 3v4H11v-9Z" fill="currentColor"/></svg>
+            <span class="s-label">lifeexperience on LinkedIn</span>
+          </a>
+          <a class="social s-dc" href="https://discord.gg/G5zb2ySFc5" data-src="social_discord" rel="noopener" aria-label="Discord invite">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14a2 2 0 0 1 2 2v14l-3-2-2 2H7l-2-2-3 2V5a2 2 0 0 1 2-2Zm9 6c.83 0 1.5.9 1.5 2s-.67 2-1.5 2-1.5-.9-1.5-2 .67-2 1.5-2Zm-4 0c.83 0 1.5.9 1.5 2s-.67 2-1.5 2-1.5-.9-1.5-2 .67-2 1.5-2Z" fill="currentColor"/></svg>
+            <span class="s-label">Join the Discord</span>
+          </a>
         </div>
       </article>
     </section>
@@ -331,12 +394,7 @@
       <article class="card kind-writing">
         <h3>shaunapple.com</h3>
         <p>Personal site and contact.</p>
-        <p><a class="btn btn-secondary" href="http://www.shaunapple.com" data-src="sites_personal" rel="noopener">Visit site</a></p>
-      </article>
-      <article class="card kind-writing">
-        <h3>Love Across Borders</h3>
-        <p>Publishing home.</p>
-        <p><a class="btn btn-secondary" href="http://www.loveacrossborders.com" data-src="sites_lab" rel="noopener">Visit site</a></p>
+        <p><a class="btn btn-secondary" href="https://www.shaunapple.com" data-src="sites_personal" rel="noopener">Visit site</a></p>
       </article>
       <article class="card kind-writing">
         <h3>GitHub Pages Hub</h3>
@@ -349,9 +407,10 @@
       <div class="note">Because of you, this is not just my story. It is ours.</div>
       <nav class="cta-row" style="justify-content:center;margin-top:10px" aria-label="Footer actions">
         <a id="copyEmail" class="btn btn-secondary" href="#" role="button" aria-label="Copy my email">Copy my email</a>
+        <a id="openEmail" class="btn btn-secondary" href="#" role="button" aria-label="Open email app">Open email app</a>
       </nav>
       <div class="links" style="margin-top:10px">
-        <a href="mailto:shaunapple@gmail.com" data-src="footer_email" rel="noopener">Email</a>
+        <a id="maskedEmail" href="#" aria-label="Show email" role="link">shaunapple [at] gmail [dot] com</a>
         <a href="#top" aria-label="Back to top" data-src="footer_top">Back to top</a>
       </div>
       <div class="copyright">© <span id="year"></span> Shaun J Apple · Orchard of Life Experience</div>
@@ -366,7 +425,7 @@
       {
         "@type": "WebSite",
         "url": "https://lifeexperience.github.io/",
-        "name": "Shaun J Apple — Life Experience",
+        "name": "A Life Experience — Shaun J Apple",
         "publisher": {"@type":"Person","name":"Shaun J Apple","url":"https://lifeexperience.github.io/"}
       },
       {
@@ -403,18 +462,11 @@
       {
         "@type": "Book",
         "name": "A Life Experience",
-        "alternateName": "A Life Experience — The Shaun Apple Story",
+        "alternateName": "A Life Experience - The Shaun Apple Story",
         "author": {"@type":"Person","name":"Shaun J Apple"},
         "inLanguage": "en",
         "creativeWorkStatus": "https://schema.org/InProgress",
         "description": "A memoir of survival and love across borders. Complete and preparing release in print, ebook, and access editions."
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Can I cancel monthly support anytime?","acceptedAnswer":{"@type":"Answer","text":"Yes. Cancel anytime. Receipts are provided and recognition can be public, initials, or anonymous."}},
-          {"@type":"Question","name":"What does my support make possible?","acceptedAnswer":{"@type":"Answer","text":"Editing and design, access editions for low vision readers, community copies, and the time and stability to finish work I can stand behind."}}
-        ]
       }
     ]
   }
@@ -436,18 +488,27 @@
       });
     })();
 
-    // Copy email button
+    // Email obfuscation and helpers
     (function(){
-      const btn = document.getElementById('copyEmail');
-      if(!btn || !navigator.clipboard) return;
-      const email = 'shaunapple' + '@' + 'gmail.com';
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        navigator.clipboard.writeText(email).then(function(){
-          btn.textContent = 'Email copied';
-          setTimeout(function(){ btn.textContent = 'Copy my email'; }, 1400);
+      const copyBtn = document.getElementById('copyEmail');
+      const openBtn = document.getElementById('openEmail');
+      const masked = document.getElementById('maskedEmail');
+      const name = 'shaunapple';
+      const host = 'gmail.com';
+      const full = name + '@' + host;
+
+      if(copyBtn && navigator.clipboard){
+        copyBtn.addEventListener('click', function(e){
+          e.preventDefault();
+          navigator.clipboard.writeText(full).then(function(){ copyBtn.textContent = 'Email copied'; setTimeout(function(){ copyBtn.textContent = 'Copy my email'; }, 1400); });
         });
-      });
+      }
+      if(openBtn){
+        openBtn.addEventListener('click', function(e){ e.preventDefault(); window.location.href = 'mailto:'+full; });
+      }
+      if(masked){
+        masked.addEventListener('click', function(e){ e.preventDefault(); masked.textContent = full; });
+      }
     })();
 
     // Outbound click tracking + auto ?src= param injection
@@ -470,3 +531,4 @@
   </script>
 </body>
 </html>
+
