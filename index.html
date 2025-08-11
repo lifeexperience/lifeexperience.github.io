@@ -23,8 +23,7 @@
   <style>
     :root{
       --bg:#070910; --text:#fbfcff; --muted:#b9c1d2; --ring:rgba(255,255,255,.18);
-      --glowA:#29f19d; --glowB:#8ed1ff; --glowC:#ff9bd4; --glowD:#ffe680;
-      --ctaText:#041a10;
+      --glowA:#29f19d; --glowB:#8ed1ff; --glowC:#ff9bd4; --glowD:#ffe680; --ctaText:#041a10;
       --link:#8ef7c8; --link-visited:#64d9a7; --link-hover:#c7ffe8;
       --t-writing:#3aa8ff; --t-books:#b987ff; --t-support:#00e676; --t-onetime:#ff8800; --t-small:#ff4d94; --t-about:#00cfe6; --t-social:#ffd166;
       --glass:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
@@ -41,27 +40,34 @@
       font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
     }
     .wrap{max-width:1120px;margin:0 auto;padding:22px 16px 100px}
-
     a{color:var(--link); text-decoration:underline; text-underline-offset:3px}
     a:visited{color:var(--link-visited)}
     a:hover{color:var(--link-hover)}
 
+    /* Buttons */
     .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:14px 18px;border-radius:16px;border:1px solid var(--ring);text-decoration:none;position:relative;isolation:isolate}
     .btn{background:linear-gradient(180deg,var(--glowA),color-mix(in srgb,var(--glowA) 84%,#000));color:var(--ctaText);font-weight:800}
     .btn::before{content:"";position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(from 0deg,var(--glowA),var(--glowB),var(--glowC),var(--glowD),var(--glowA));filter:blur(10px);opacity:.35;z-index:-1}
     .btn-secondary{background:#1e2331;color:var(--text);box-shadow:inset 0 0 0 1px var(--ring);font-weight:700}
     .btn:focus-visible,.btn-secondary:focus-visible{outline:3px solid color-mix(in srgb,var(--glowA) 60%, #fff 40%); outline-offset:2px}
 
-    .hero{position:relative;text-align:center;padding:16px 0 14px}
+    /* Hero */
+    .hero{text-align:center;padding:16px 0 14px}
     h1{font-size:clamp(2.2rem,5.2vw,3.4rem);margin:10px 0 8px}
     .tag{font-size:clamp(1.08rem,2.2vw,1.24rem);color:var(--muted);margin:8px auto 16px;max-width:62ch}
     .nowrap{white-space:nowrap}
 
+    /* Mascot + thumbnails */
     .avatar{width:176px;height:176px;border-radius:50%;background:linear-gradient(135deg,var(--glowA),var(--glowB));display:grid;place-items:center;box-shadow:0 18px 44px rgba(0,0,0,.38);position:relative;overflow:hidden;margin:10px auto}
     .avatar::after{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 20%, rgba(255,255,255,.2) 20% 30%, transparent 30% 100%);animation:spin 9s linear infinite;opacity:.6}
     .avatar-img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
     @media (prefers-reduced-motion: reduce){ .avatar::after{animation:none} }
     @keyframes spin{to{transform:rotate(1turn)}}
+
+    .avatar-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+    .avatar-thumb{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid color-mix(in srgb,var(--glowA) 35%, #181d29);cursor:pointer;transition:transform .15s ease,border-color .15s ease;background:#111}
+    .avatar-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .avatar-thumb:hover{transform:translateY(-2px);border-color:var(--glowA)}
 
     .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:10px auto}
     .chip{font-size:12px;font-weight:800;padding:7px 11px;border-radius:999px;background:#242a3b;border:1px solid var(--ring);color:var(--muted)}
@@ -71,6 +77,7 @@
 
     .divider{height:1px;background:var(--ring);margin:30px 0}
 
+    /* Clusters and cards */
     .cluster{display:grid;gap:18px;grid-template-columns:1fr;margin-top:24px}
     @media(min-width:980px){.cluster{grid-template-columns:repeat(3,1fr)}}
     .card{border-radius:18px;border:1px solid var(--ring);padding:18px;box-shadow:0 12px 28px rgba(0,0,0,.28);background:var(--glass)}
@@ -81,7 +88,6 @@
     .kind-books{background:linear-gradient(180deg,color-mix(in srgb,var(--t-books) 14%, #0a0a12), #121023)}
     .kind-support{background:linear-gradient(180deg,color-mix(in srgb,var(--t-support) 14%, #08140d), #0f1a12)}
     .kind-onetime{background:linear-gradient(180deg,color-mix(in srgb,var(--t-onetime) 16%, #1a1106), #201407)}
-    .kind-small{background:linear-gradient(180deg,color-mix(in srgb,var(--t-small) 16%, #1a0a12), #200a14)}
     .kind-about{background:linear-gradient(180deg,color-mix(in srgb,var(--t-about) 14%, #061418), #0a1b20)}
     .kind-social{background:linear-gradient(180deg,color-mix(in srgb,var(--t-social) 18%, #1a1606), #221b07)}
 
@@ -93,13 +99,6 @@
 
     .social-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
     .social{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;color:#0c0f14;text-decoration:none;font-weight:800;border:1px solid rgba(255,255,255,.18)}
-
-    footer{margin-top:40px;color:var(--muted);font-size:.95rem;text-align:center}
-    .note{margin-top:8px;color:var(--muted)}
-    .copyright{margin-top:6px;font-size:.9rem;opacity:.9}
-
-    .flag{display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;font-size:.78rem;font-weight:800;color:#1b0f00;background:linear-gradient(180deg,#ffd166,#ffc34d)}
-    .soon-btn{display:inline-block;padding:12px 14px;border-radius:12px;background:#1a1f2b;border:1px dashed var(--ring);color:var(--muted);font-weight:700}
   </style>
 </head>
 <body>
@@ -109,17 +108,19 @@
         <img class="avatar-img" src="images/mascot_circle_512.png" alt="Life Experience mascot" width="176" height="176"
              onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><defs><radialGradient id=\'g\' cx=\'50%\' cy=\'50%\' r=\'50%\'><stop offset=\'0%\' stop-color=\'%2329f19d\'/><stop offset=\'100%\' stop-color=\'%23070910\'/></radialGradient></defs><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'url(%23g)\'/><text x=\'50%\' y=\'57%\' text-anchor=\'middle\' font-size=\'92\'>🍎</text></svg>'" />
       </div>
-
+      <div class="avatar-bar" role="group" aria-label="Author portraits (tap to set)">
+        <button class="avatar-thumb" data-src="images/staycurious_square_512.jpg" aria-label="Use Stay Curious portrait"><img src="images/staycurious_square_512.jpg" alt="Stay Curious portrait thumbnail" width="44" height="44" loading="lazy"></button>
+        <button class="avatar-thumb" data-src="images/olympus_square_512.jpg" aria-label="Use Olympus portrait"><img src="images/olympus_square_512.jpg" alt="Olympus portrait thumbnail" width="44" height="44" loading="lazy"></button>
+        <button class="avatar-thumb" data-src="images/naradeer_square_512.jpg" aria-label="Use Nara Deer portrait"><img src="images/naradeer_square_512.jpg" alt="Nara Deer portrait thumbnail" width="44" height="44" loading="lazy"></button>
+      </div>
       <h1 id="hero-title">A Life Experience</h1>
       <p class="tag" id="hero-sub">A rare life. A story worth keeping alive. If you have ever felt unseen, you belong here. I write to tell the truth with care. When you support this work, you are joining The Keeping and stepping into the Orchard, a circle that refuses to let this story <span class="nowrap">fade.</span></p>
-
       <div class="chips" aria-hidden="true">
         <span class="chip">Low vision. High honesty.</span>
         <span class="chip">No quotas. No filler.</span>
         <span class="chip">Truth told with care.</span>
         <span class="chip">Give what feels generous.</span>
       </div>
-
       <div class="hooks-rail" aria-label="Power hooks">
         <div class="hook">Keep this alive with love</div>
         <div class="hook">Stand with the unseen</div>
@@ -127,7 +128,6 @@
         <div class="hook">Be the reason this stays</div>
         <div class="hook">Your name in The Keeping</div>
       </div>
-
       <nav class="cta-row" aria-label="Primary actions">
         <a class="btn" href="https://www.patreon.com/c/ShaunApple" target="_blank" rel="noopener" aria-label="Give monthly on Patreon">Give monthly on Patreon</a>
         <a class="btn btn-secondary" href="https://ko-fi.com/shaunapple" target="_blank" rel="noopener" aria-label="Support on Ko-fi">Quick gift on Ko-fi</a>
@@ -136,7 +136,6 @@
         <a class="btn btn-secondary" href="https://substack.com/@shaunapple" target="_blank" rel="noopener" aria-label="Read on Substack">Read on Substack</a>
         <a class="btn btn-secondary" href="https://medium.com/@shaunapple" target="_blank" rel="noopener" aria-label="Read on Medium">Read on Medium</a>
       </nav>
-
       <p class="sub" style="text-align:center">Cancel anytime. Receipts provided.</p>
     </section>
 
@@ -188,6 +187,13 @@
 
     <section id="support" class="cluster" aria-labelledby="support-title">
       <h2 id="support-title" style="text-align:center"><span class="badge">Support</span></h2>
+      <article class="card kind-support">
+        <h3>Monthly membership</h3>
+        <p>This space is a promise. No quotas and no noise. Only pages made with care.</p>
+        <p>Your membership finishes the memoir <strong>A Life Experience</strong>, preserves <strong>SWAY</strong> and <strong>A Double Star System</strong>, and funds large type and audio friendly editions for low vision readers.</p>
+        <p><a class="btn btn-secondary" href="https://www.patreon.com/c/ShaunApple" target="_blank" rel="noopener">Start on Patreon</a></p>
+        <p class="sub">Tier names that feel like belonging: Seed Planter, Page Turner, Branch Builder, Story Sustainer, Legacy Patron, Founder, Benefactor.</p>
+      </article>
       <article class="card kind-small">
         <h3>Small kindness</h3>
         <p>You are not buying coffee. You are planting hope. Your kindness becomes finished pages, clear audio, and large type that real people can read.</p>
@@ -195,13 +201,6 @@
           <a href="https://ko-fi.com/shaunapple" target="_blank" rel="noopener">Ko-fi</a>
           <a href="https://buymeacoffee.com/shaunapple" target="_blank" rel="noopener">Buy Me a Coffee</a>
         </div>
-      </article>
-      <article class="card kind-support">
-        <h3>Monthly membership</h3>
-        <p>This space is a promise. No quotas and no noise. Only pages made with care.</p>
-        <p>Your membership finishes the memoir <strong>A Life Experience</strong>, preserves <strong>SWAY</strong> and <strong>A Double Star System</strong>, and funds large type and audio friendly editions for low vision readers.</p>
-        <p><a class="btn btn-secondary" href="https://www.patreon.com/c/ShaunApple" target="_blank" rel="noopener">Start on Patreon</a></p>
-        <p class="sub">Tier names that feel like belonging: Seed Planter, Page Turner, Branch Builder, Story Sustainer, Legacy Patron, Founder, Benefactor.</p>
       </article>
       <article class="card kind-onetime">
         <h3>One time gift</h3>
@@ -270,6 +269,17 @@
     (function(){
       const masked = document.getElementById('maskedEmail');
       if(masked){ masked.addEventListener('click', function(e){ e.preventDefault(); masked.textContent = 'shaunapple' + '@' + 'gmail.com'; }); }
+    })();
+
+    // Safe avatar swap for the 3 thumbnails only (no effect on links)
+    (function(){
+      const main = document.querySelector('.avatar-img');
+      document.querySelectorAll('.avatar-thumb').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const src = btn.getAttribute('data-src');
+          if(src && main){ main.src = src; }
+        });
+      });
     })();
   </script>
 </body>
